@@ -9,7 +9,7 @@ import ProjectCard from "@/components/ProjectCard";
 const stats = [
   { icon: Clock, value: "3+", label: "Years of Excellence" },
   { icon: Building2, value: "10", label: "Landmark Projects" },
-  { icon: Users, value: "1,500+", label: "Happy Homeowners" },
+  { icon: Users, value: "500+", label: "Happy Homeowners" },
   { icon: TrendingUp, value: "$2B+", label: "In Development" },
 ];
 
