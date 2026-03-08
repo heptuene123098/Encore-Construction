@@ -7,9 +7,9 @@ import project5 from "@/assets/project-5.jpg";
 
 const posts = [
   {
-    slug: "azure-towers-milestone",
-    title: "Azure Towers Reaches 72% Completion",
-    excerpt: "Our flagship development in the Downtown Business District has hit a major milestone...",
+    slug: "M6M-milestone",
+    title: "MAISON 6 Reaches 72% Completion",
+    excerpt: "Our flagship development in the MOSELY District has hit a major milestone...",
     date: "Feb 28, 2026",
     image: project1,
     category: "Project Update",
@@ -17,15 +17,15 @@ const posts = [
   {
     slug: "sustainable-building",
     title: "The Future of Sustainable High-Rise Living",
-    excerpt: "How Elevate Developments is leading the charge in eco-friendly luxury construction...",
+    excerpt: "How Encore Construction is leading the charge in eco-friendly luxury construction...",
     date: "Feb 15, 2026",
     image: project3,
     category: "Industry Insights",
   },
   {
-    slug: "crown-residences-handover",
-    title: "Crown Residences: Full Handover Complete",
-    excerpt: "All 120 units have been successfully handed over to delighted homeowners...",
+    slug: "RBM-handover",
+    title: "The Rock Apartment Residences: Full Handover Complete",
+    excerpt: "All 16 units have been successfully handed over to delighted homeowners...",
     date: "Jan 30, 2026",
     image: project5,
     category: "Milestone",

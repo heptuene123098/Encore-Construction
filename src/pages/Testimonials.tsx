@@ -8,7 +8,7 @@ const Testimonials = () => (
         <div className="text-center mb-12">
           <span className="text-gold text-sm font-semibold tracking-widest uppercase">Reviews</span>
           <h1 className="font-display text-4xl font-bold text-foreground mt-2">Client <span className="text-gold-gradient">Testimonials</span></h1>
-          <p className="text-muted-foreground mt-2 max-w-xl mx-auto">Real stories from homeowners and investors who chose Elevate Developments.</p>
+          <p className="text-muted-foreground mt-2 max-w-xl mx-auto">Real stories from homeowners and investors who chose Encore Construction.</p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

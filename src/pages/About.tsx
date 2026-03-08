@@ -3,12 +3,14 @@ import { Link } from "react-router-dom";
 import { Target, Eye, Award, Shield, Users, Building2, ChevronRight } from "lucide-react";
 import teamImage from "@/assets/team.jpg";
 import heroImage from "@/assets/hero-skyline.jpg";
+import toba from "../assets/images/toba.jpg";
+import funmbi from "../assets/images/funmbi.jpg";
 
 const leadership = [
-  { name: "Alexander Grant", role: "CEO & Founder", desc: "25+ years in real estate development" },
-  { name: "Victoria Chen", role: "Chief Architect", desc: "Award-winning high-rise designer" },
-  { name: "Marcus Johnson", role: "VP Construction", desc: "Engineering excellence specialist" },
-  { name: "Sarah Williams", role: "CFO", desc: "Strategic financial leadership" },
+  { name: "Toba Ooye", role: "CEO & Founder", desc: "25+ years in construction and real estate development", image: toba },
+  { name: "Oluwafunmbi Ajayi", role: "QA/QC Manager", desc: "Award-winning high-rise designer", image: funmbi },
+  { name: "Oluseyi Olure", role: "QA/QC Manager", desc: "Engineering excellence specialist", image: "" },
+  { name: "Hephzibah Otuene", role: "Project Manager", desc: "Strategic administrative leadership", image: "" },
 ];
 
 const About = () => (
@@ -19,7 +21,7 @@ const About = () => (
       <div className="absolute inset-0 hero-overlay" />
       <div className="relative z-10 container-wide mx-auto px-4 sm:px-6 lg:px-8 pt-20">
         <span className="text-gold text-sm font-semibold tracking-widest uppercase">Our Story</span>
-        <h1 className="font-display text-4xl sm:text-5xl font-bold text-primary-foreground mt-2">About Elevate</h1>
+        <h1 className="font-display text-4xl sm:text-5xl font-bold text-primary-foreground mt-2">About <span className="text-gold-gradient">Encore</span></h1>
       </div>
     </section>
 
@@ -28,7 +30,7 @@ const About = () => (
       <div className="container-wide mx-auto grid lg:grid-cols-2 gap-12 items-center">
         <div>
           <h2 className="font-display text-3xl font-bold text-foreground mb-4">
-            Crafting <span className="text-gold-gradient">Iconic</span> Skylines Since 2022
+            Crafting <span className="text-gold-gradient">Iconic</span> Skylines Since 202
           </h2>
           <p className="text-muted-foreground leading-relaxed mb-4">
             Founded with a bold vision to redefine urban living, Elevate Developments has rapidly established 
@@ -78,7 +80,7 @@ const About = () => (
           {leadership.map((member) => (
             <div key={member.name} className="text-center p-6 bg-card rounded-lg border border-border shadow-sm">
               <div className="w-20 h-20 gold-gradient rounded-full mx-auto mb-4 flex items-center justify-center">
-                <Users className="w-8 h-8 text-primary" />
+                <img src={member.image} alt={member.name} className="w-full h-full rounded-full object-cover" />
               </div>
               <h4 className="font-display text-lg font-semibold text-foreground">{member.name}</h4>
               <div className="text-gold text-sm font-medium">{member.role}</div>

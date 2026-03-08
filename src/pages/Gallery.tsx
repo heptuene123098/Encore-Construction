@@ -10,11 +10,11 @@ import { useState } from "react";
 
 const images = [
   { src: heroImage, caption: "Skyline Panorama", category: "Exterior" },
-  { src: project1, caption: "Platinum Plaza", category: "Exterior" },
-  { src: project2, caption: "Azure Towers Construction", category: "Construction" },
-  { src: project3, caption: "Sky Gardens Towers", category: "Exterior" },
-  { src: project4, caption: "Horizon Heights Progress", category: "Construction" },
-  { src: project5, caption: "Crown Residences", category: "Completed" },
+  { src: project1, caption: "The Good Place", category: "Exterior" },
+  { src: project2, caption: "The Good Place", category: "Construction" },
+  { src: project3, caption: "The Rock Apartment Construction", category: "Exterior" },
+  { src: project4, caption: "The Rock Apartment Progress", category: "Construction" },
+  { src: project5, caption: "The Rock Apartment Completed", category: "Completed" },
   { src: interiorImage, caption: "Luxury Penthouse Interior", category: "Interior" },
   { src: teamImage, caption: "Our Leadership Team", category: "Team" },
 ];

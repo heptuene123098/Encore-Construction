@@ -35,10 +35,10 @@ const Index = () => {
               <Award className="w-4 h-4" /> Premium Real Estate Developer
             </div>
             <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-6">
-              Building Tomorrow's <span className="text-gold-gradient">Skylines</span> Today
+              Building Tomorrow's <span className="text-gold-gradient">Encore</span> Today
             </h1>
             <p className="text-lg text-primary-foreground/80 mb-8 max-w-xl font-body">
-              Elevate Developments crafts iconic high-rise residences that redefine luxury living. 
+              Encore Construction crafts iconic high-rise residences that redefine luxury living. 
               With 10 landmark projects, we're shaping cities of the future.
             </p>
             <div className="flex flex-wrap gap-4">

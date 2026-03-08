@@ -8,12 +8,8 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 gold-gradient rounded-sm flex items-center justify-center">
-                <span className="font-display font-bold text-lg text-primary">E</span>
-              </div>
-              <div>
-                <span className="font-display text-xl font-bold tracking-wide">ELEVATE</span>
-                <span className="block text-[10px] tracking-[0.3em] text-gold uppercase -mt-1">Developments</span>
+              <div className="w-15 h-10 rounded-sm flex items-center justify-center">
+                <img src="/public/logoT.png" alt="Encore Construction" className="w-full h-full object-contain" />
               </div>
             </div>
             <p className="text-primary-foreground/70 text-sm leading-relaxed">
@@ -35,14 +31,14 @@ const Footer = () => {
           <div>
             <h4 className="font-display text-lg font-semibold mb-4 text-gold">Contact</h4>
             <div className="space-y-3">
-              <a href="tel:+1234567890" className="flex items-center gap-3 text-sm text-primary-foreground/70 hover:text-gold transition-colors">
-                <Phone className="w-4 h-4 text-gold flex-shrink-0" /> +1 (234) 567-890
+              <a href="tel:+2347031071919" className="flex items-center gap-3 text-sm text-primary-foreground/70 hover:text-gold transition-colors">
+                <Phone className="w-4 h-4 text-gold flex-shrink-0" /> +234 703 - 107 - 1919
               </a>
-              <a href="mailto:info@elevate-dev.com" className="flex items-center gap-3 text-sm text-primary-foreground/70 hover:text-gold transition-colors">
-                <Mail className="w-4 h-4 text-gold flex-shrink-0" /> info@elevate-dev.com
+              <a href="mailto:info@encoreconstruction.com" className="flex items-center gap-3 text-sm text-primary-foreground/70 hover:text-gold transition-colors">
+                <Mail className="w-4 h-4 text-gold flex-shrink-0" /> info@encoreconstruction.com
               </a>
               <div className="flex items-start gap-3 text-sm text-primary-foreground/70">
-                <MapPin className="w-4 h-4 text-gold flex-shrink-0 mt-0.5" /> 100 Skyline Avenue, Suite 4500, Metro City
+                <MapPin className="w-4 h-4 text-gold flex-shrink-0 mt-0.5" /> 24A Taiye Olowu, Lekki Phase 1, Lagos
               </div>
             </div>
           </div>
@@ -58,7 +54,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-12 pt-8 border-t border-gold/10 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-primary-foreground/50">© 2026 Elevate Developments. All rights reserved.</p>
+          <p className="text-sm text-primary-foreground/50">© 2026 GANL. All rights reserved.</p>
           <div className="flex gap-6 text-sm text-primary-foreground/50">
             <Link to="/privacy" className="hover:text-gold transition-colors">Privacy Policy</Link>
             <Link to="/terms" className="hover:text-gold transition-colors">Terms of Service</Link>

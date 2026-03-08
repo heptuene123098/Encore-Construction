@@ -22,13 +22,10 @@ const Navbar = () => {
       <div className="container-wide mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <Link to="/" className="flex items-center gap-2">
-            <div className="w-10 h-10 gold-gradient rounded-sm flex items-center justify-center">
-              <span className="font-display font-bold text-lg text-primary">E</span>
+            <div className="w-15 h-10 rounded-sm flex items-center justify-center">
+              <img src="/public/logoT.png" alt="Encore Construction" className="w-full h-full object-contain" />
             </div>
-            <div>
-              <span className="font-display text-xl font-bold text-primary-foreground tracking-wide">ELEVATE</span>
-              <span className="block text-[10px] tracking-[0.3em] text-gold uppercase -mt-1">Developments</span>
-            </div>
+        
           </Link>
 
           <div className="hidden lg:flex items-center gap-1">
@@ -48,9 +45,9 @@ const Navbar = () => {
           </div>
 
           <div className="hidden lg:flex items-center gap-3">
-            <a href="tel:+1234567890" className="flex items-center gap-2 text-primary-foreground/80 text-sm">
+            <a href="tel:+2347031071919" className="flex items-center gap-2 text-primary-foreground/80 text-sm">
               <Phone className="w-4 h-4 text-gold" />
-              +1 (234) 567-890
+              +234 703 - 107-1919
             </a>
             <Button variant="gold" size="sm" asChild>
               <Link to="/enquiry">Get in Touch</Link>

@@ -48,13 +48,13 @@ const Enquiry = () => {
                 <h3 className="font-display text-lg font-semibold text-foreground mb-4">Contact Info</h3>
                 <div className="space-y-4">
                   <a href="tel:+1234567890" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-gold transition-colors">
-                    <Phone className="w-5 h-5 text-gold" /> +1 (234) 567-890
+                    <Phone className="w-5 h-5 text-gold" /> +2347031071919
                   </a>
                   <a href="mailto:info@elevate-dev.com" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-gold transition-colors">
-                    <Mail className="w-5 h-5 text-gold" /> info@elevate-dev.com
+                    <Mail className="w-5 h-5 text-gold" /> info@encoreconstruction.com
                   </a>
                   <div className="flex items-start gap-3 text-sm text-muted-foreground">
-                    <MapPin className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" /> 100 Skyline Avenue, Suite 4500, Metro City
+                    <MapPin className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" /> 24A Taiye Olowu, Lekki Phase 1, Lagos
                   </div>
                 </div>
               </div>
