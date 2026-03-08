@@ -23,7 +23,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-20">
           <Link to="/" className="flex items-center gap-2">
             <div className="w-15 h-10 rounded-sm flex items-center justify-center">
-              <img src="/public/logoT.png" alt="Encore Construction" className="w-full h-full object-contain" />
+              <img src="/logoT.png" alt="Encore Construction" className="w-full h-full object-contain" />
             </div>
         
           </Link>
