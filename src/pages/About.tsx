@@ -3,14 +3,16 @@ import { Link } from "react-router-dom";
 import { Target, Eye, Award, Shield, Users, Building2, ChevronRight } from "lucide-react";
 import teamImage from "@/assets/team.jpg";
 import heroImage from "@/assets/hero-skyline.jpg";
-import toba from "../assets/images/toba.jpg";
-import funmbi from "../assets/images/funmbi.jpg";
+import toba from "../assets/images/toba.png";
+import funmbi from "../assets/images/funmbi.png";
+import seyi from "../assets/images/seyi.png";
+import hebz from "../assets/images/hebz.png";
 
 const leadership = [
   { name: "Toba Ooye", role: "CEO & Founder", desc: "25+ years in construction and real estate development", image: toba },
   { name: "Oluwafunmbi Ajayi", role: "QA/QC Manager", desc: "Award-winning high-rise designer", image: funmbi },
-  { name: "Oluseyi Olure", role: "QA/QC Manager", desc: "Engineering excellence specialist", image: "" },
-  { name: "Hephzibah Otuene", role: "Project Manager", desc: "Strategic administrative leadership", image: "" },
+  { name: "Oluseyi Olure", role: "QA/QC Manager", desc: "Engineering excellence specialist", image: seyi },
+  { name: "Hephzibah Otuene", role: "Project Manager", desc: "Strategic administrative leadership", image: hebz },
 ];
 
 const About = () => (
