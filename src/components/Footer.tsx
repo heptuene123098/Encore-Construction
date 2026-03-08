@@ -9,7 +9,7 @@ const Footer = () => {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <div className="w-15 h-10 rounded-sm flex items-center justify-center">
-                <img src="/logoT.png" alt="Encore Construction" className="w-full h-full object-contain" />
+                <img src="./public/logoT.png" alt="Encore Construction" className="w-full h-full object-contain" />
               </div>
             </div>
             <p className="text-primary-foreground/70 text-sm leading-relaxed">
