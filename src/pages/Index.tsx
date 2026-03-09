@@ -5,20 +5,20 @@ import heroImage from "@/assets/hero-skyline.jpg";
 import interiorImage from "@/assets/interior-luxury.jpg";
 import { projects, testimonials } from "@/data/projects";
 import ProjectCard from "@/components/ProjectCard";
+import partner1 from "@/assets/partners/RM.png";
+import partner2 from "@/assets/partners/cemex.png";
+import partner3 from "@/assets/partners/HSA.png";
+import partner4 from "@/assets/partners/fg.webp";
+import partner5 from "@/assets/partners/LG.png";
 
 const stats = [
   { icon: Clock, value: "3+", label: "Years of Excellence" },
   { icon: Building2, value: "10", label: "Landmark Projects" },
-  { icon: Users, value: "500+", label: "Happy Homeowners" },
-  { icon: TrendingUp, value: "$2B+", label: "In Development" },
+  { icon: Users, value: "100+", label: "Happy Homeowners" },
+  { icon: TrendingUp, value: "$2M+", label: "In Development" },
 ];
 
-const investReasons = [
-  { icon: Shield, title: "Quality Construction", desc: "Premium materials and world-class engineering standards in every build." },
-  { icon: Clock, title: "On-Time Delivery", desc: "Proven track record of delivering projects on schedule, every time." },
-  { icon: Gem, title: "Modern Designs", desc: "Award-winning architecture that defines the future of urban living." },
-  { icon: BarChart3, title: "High ROI", desc: "Properties that consistently appreciate, delivering exceptional returns." },
-];
+const partners = [partner1, partner2, partner3, partner4, partner5];
 
 const Index = () => {
   const featuredProjects = projects.filter(p => p.status === "active").slice(0, 3);
@@ -32,7 +32,7 @@ const Index = () => {
         <div className="relative z-10 container-wide mx-auto px-4 sm:px-6 lg:px-8 pt-20">
           <div className="max-w-2xl animate-fade-up">
             <div className="inline-flex items-center gap-2 gold-gradient text-primary text-sm font-semibold px-4 py-1.5 rounded-full mb-6">
-              <Award className="w-4 h-4" /> Premium Real Estate Developer
+              <Award className="w-4 h-4" /> Premium Construction Company
             </div>
             <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-6">
               Building Tomorrow's <span className="text-gold-gradient">Encore</span> Today
@@ -115,26 +115,36 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Why Invest */}
-      <section className="section-padding navy-gradient">
-        <div className="container-wide mx-auto">
-          <div className="text-center mb-12">
-            <span className="text-gold text-sm font-semibold tracking-widest uppercase">Investment</span>
-            <h2 className="font-display text-3xl sm:text-4xl font-bold text-primary-foreground mt-2">
-              Why Invest <span className="text-gold-gradient">With Us</span>
-            </h2>
-          </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {investReasons.map((reason) => (
-              <div key={reason.title} className="text-center p-6 rounded-lg bg-primary-foreground/5 border border-gold/10 hover:border-gold/30 transition-colors">
-                <reason.icon className="w-10 h-10 text-gold mx-auto mb-4" />
-                <h3 className="font-display text-lg font-semibold text-primary-foreground mb-2">{reason.title}</h3>
-                <p className="text-sm text-primary-foreground/70">{reason.desc}</p>
-              </div>
+     {/* Partners */}
+    <section className="section-padding navy-gradient overflow-hidden">
+      <div className="container-wide mx-auto">
+
+        <div className="text-center mb-12">
+          <span className="text-gold text-sm font-semibold tracking-widest uppercase">
+            Partners
+          </span>
+          <h2 className="font-display text-3xl sm:text-4xl font-bold text-primary-foreground mt-2">
+            Our Trusted <span className="text-gold-gradient">Partners</span>
+          </h2>
+        </div>
+
+        <div className="relative w-full overflow-hidden">
+          <div className="flex gap-16 animate-partners whitespace-nowrap">
+
+            {[...partners, ...partners].map((logo, i) => (
+              <img
+                key={i}
+                src={logo}
+                alt="Partner"
+                className="h-16 opacity-80 hover:opacity-100 transition"
+              />
             ))}
+
           </div>
         </div>
-      </section>
+
+      </div>
+    </section>
 
       {/* Testimonials Preview */}
       <section className="section-padding">

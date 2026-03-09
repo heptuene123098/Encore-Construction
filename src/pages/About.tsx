@@ -1,52 +1,115 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Target, Eye, Award, Shield, Users, Building2, ChevronRight } from "lucide-react";
+import { useState, useEffect } from "react";
+import { Target, Eye, Award, Shield, Building2, ChevronRight } from "lucide-react";
+
 import teamImage from "@/assets/team.jpg";
+import teamImage1 from "@/assets/team1.jpg";
+import teamImage2 from "@/assets/team2.jpg";
 import heroImage from "@/assets/hero-skyline.jpg";
+
 import toba from "../assets/images/toba.png";
 import funmbi from "../assets/images/funmbi.png";
 import seyi from "../assets/images/seyi.png";
-import hebz from "../assets/images/hebz.png";
+import hebz from "../assets/images/hebz.jpg";
+import dorcas from "../assets/images/dorcas.jpg";
+import pemu from "../assets/images/pemu.jpg";
+import pelu from "../assets/images/pelu.jpg";
+import floyd from "../assets/images/floyd.jpg";
+import akeem from "../assets/images/akeem.png";
+import gabriel from "../assets/images/gabriel.jpg";
+import korede from "../assets/images/korede.jpg";
+import ife from "../assets/images/ife.jpg";
+import ruth from "../assets/images/ruth.jpg";
+import titi from "../assets/images/titi.jpg";
+import mary from "../assets/images/mary.jpg";
+import douglas from "../assets/images/douglas.jpg";
+import moses from "../assets/images/moses.jpg";
+
+const teamImages = [teamImage, teamImage1, teamImage2];
 
 const leadership = [
   { name: "Toba Ooye", role: "CEO & Founder", desc: "25+ years in construction and real estate development", image: toba },
   { name: "Oluwafunmbi Ajayi", role: "QA/QC Manager", desc: "Award-winning high-rise designer", image: funmbi },
   { name: "Oluseyi Olure", role: "QA/QC Manager", desc: "Engineering excellence specialist", image: seyi },
+  { name: "Gabriel Oluwadurotimi", role: "MEP Manager", desc: "Electrical excellence specialist", image: gabriel },
+  { name: "Akorede Akinpelu", role: "Survey Manager", desc: "Surveying specialist", image: korede },
+  { name: "Joseph Ogunleye", role: "QA/QC Asst. Manager", desc: "Engineering excellence specialist", image: seyi },
   { name: "Hephzibah Otuene", role: "Project Manager", desc: "Strategic administrative leadership", image: hebz },
+  { name: "Dorcas Akpan", role: "QS Assistant", desc: "Project Cost Analyst", image: dorcas },
+  { name: "Pemunu Esheyigba", role: "QS Assistant", desc: "Project Cost Analyst", image: pemu },
+  { name: "Akeem Aremu", role: "QS Assistant", desc: "Project Cost Analyst", image: akeem },
+  { name: "Pelumi Arinloye", role: "Project Support", desc: "Project Schedule Analyst", image: pelu },
+  { name: "Ifeoluwa Bolaji", role: "QA/QC Assistant", desc: "Project Design Assistant", image: ife },
+  { name: "Ruth Odunayo", role: "QA/QC Assistant", desc: "Project Design Assistant", image: ruth },
+  { name: "Foyeke Oyedokun", role: "QA/QC Assistant", desc: "Project Design Assistant", image: titi },
+  { name: "Ridwan Atanda", role: "Construction Manager, GPI", desc: "Efficient construction professional", image: floyd },
+  { name: "Afolakemi Talabi", role: "Construction Manager, GPL", desc: "Efficient construction professional", image: floyd },
+  { name: "Sodiq Adebanji", role: "Construction Manager, M6M", desc: "Efficient construction professional", image: floyd },
+  { name: "Mary Obafemi", role: "Construction Manager, MOM", desc: "Efficient construction professional", image: mary },
+  { name: "Moses Ogunfowora", role: "Construction Manager, RAG", desc: "Efficient construction professional", image: moses },
+  { name: "Olalekan Abanikanda", role: "Construction Manager, SPA", desc: "Efficient construction professional", image: floyd },
+  { name: "Douglas Igbinedion", role: "Construction Manager, TAC", desc: "Efficient construction professional", image: douglas },
 ];
 
-const About = () => (
-  <div>
-    {/* Hero */}
-    <section className="relative h-[50vh] min-h-[400px] flex items-center">
-      <img src={heroImage} alt="Skyline" className="absolute inset-0 w-full h-full object-cover" />
-      <div className="absolute inset-0 hero-overlay" />
-      <div className="relative z-10 container-wide mx-auto px-4 sm:px-6 lg:px-8 pt-20">
-        <span className="text-gold text-sm font-semibold tracking-widest uppercase">Our Story</span>
-        <h1 className="font-display text-4xl sm:text-5xl font-bold text-primary-foreground mt-2">About <span className="text-gold-gradient">Encore</span></h1>
-      </div>
-    </section>
+const About = () => {
 
-    {/* Story */}
-    <section className="section-padding">
-      <div className="container-wide mx-auto grid lg:grid-cols-2 gap-12 items-center">
-        <div>
-          <h2 className="font-display text-3xl font-bold text-foreground mb-4">
-            Crafting <span className="text-gold-gradient">Iconic</span> Skylines Since 202
-          </h2>
-          <p className="text-muted-foreground leading-relaxed mb-4">
-            Founded with a bold vision to redefine urban living, Elevate Developments has rapidly established 
-            itself as a premier high-rise construction and real estate development company. In just three years, 
-            we've launched 10 landmark projects that set new benchmarks in luxury, sustainability, and innovation.
-          </p>
-          <p className="text-muted-foreground leading-relaxed">
-            Our team of world-class architects, engineers, and designers work together to create residences 
-            that are more than buildings—they are communities, statements, and legacies.
-          </p>
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev + 1) % teamImages.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <div>
+
+      {/* Hero */}
+      <section className="relative h-[50vh] min-h-[400px] flex items-center">
+        <img src={heroImage} alt="Skyline" className="absolute inset-0 w-full h-full object-cover" />
+        <div className="absolute inset-0 hero-overlay" />
+
+        <div className="relative z-10 container-wide mx-auto px-4 sm:px-6 lg:px-8 pt-20">
+          <span className="text-gold text-sm font-semibold tracking-widest uppercase">Our Story</span>
+          <h1 className="font-display text-4xl sm:text-5xl font-bold text-primary-foreground mt-2">
+            About <span className="text-gold-gradient">Encore</span>
+          </h1>
         </div>
-        <img src={teamImage} alt="Leadership team" className="rounded-lg shadow-xl w-full h-80 object-cover" loading="lazy" />
-      </div>
-    </section>
+      </section>
+
+      {/* Story */}
+      <section className="section-padding">
+        <div className="container-wide mx-auto grid lg:grid-cols-2 gap-12 items-center">
+
+          <div>
+            <h2 className="font-display text-3xl font-bold text-foreground mb-4">
+              Crafting <span className="text-gold-gradient">Iconic</span> Skylines Since 202
+            </h2>
+
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Founded with a bold vision to redefine urban living, Elevate Developments has rapidly established 
+              itself as a premier high-rise construction and real estate development company.
+            </p>
+
+            <p className="text-muted-foreground leading-relaxed">
+              Our team of world-class architects, engineers, and designers work together to create residences 
+              that are more than buildings—they are communities, statements, and legacies.
+            </p>
+          </div>
+
+          {/* Auto-changing Image */}
+          <img
+            src={teamImages[index]}
+            alt="Leadership team"
+            className="rounded-lg shadow-xl w-full h-80 object-cover transition-opacity duration-700"
+            loading="lazy"
+          />
+
+        </div>
+      </section>
 
     {/* Mission & Vision */}
     <section className="section-padding bg-secondary">
@@ -82,7 +145,7 @@ const About = () => (
           {leadership.map((member) => (
             <div key={member.name} className="text-center p-6 bg-card rounded-lg border border-border shadow-sm">
               <div className="w-20 h-20 gold-gradient rounded-full mx-auto mb-4 flex items-center justify-center">
-                <img src={member.image} alt={member.name} className="w-full h-full rounded-full object-cover" />
+                <img src={member.image} alt={member.name} className="w-full rounded-full object-cover" />
               </div>
               <h4 className="font-display text-lg font-semibold text-foreground">{member.name}</h4>
               <div className="text-gold text-sm font-medium">{member.role}</div>
@@ -118,5 +181,6 @@ const About = () => (
     </section>
   </div>
 );
+}
 
 export default About;
