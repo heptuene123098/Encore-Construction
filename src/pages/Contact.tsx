@@ -43,9 +43,9 @@ const Contact = () => {
             </div>
             <div className="space-y-6">
               {[
-                { icon: Phone, label: "Phone", value: "+1 (234) 567-890", href: "tel:+1234567890" },
-                { icon: Mail, label: "Email", value: "info@elevate-dev.com", href: "mailto:info@elevate-dev.com" },
-                { icon: MapPin, label: "Office", value: "100 Skyline Avenue, Suite 4500, Metro City" },
+                { icon: Phone, label: "Phone", value: "+2347031071919", href: "tel:+2347031071919" },
+                { icon: Mail, label: "Email", value: "info@encore-construction.com", href: "mailto:info@encore-construction.com" },
+                { icon: MapPin, label: "Office", value: "24A Taiye Olowu, Lekki Phase 1, Lagos" },
                 { icon: Clock, label: "Hours", value: "Mon - Fri: 9:00 AM - 6:00 PM" },
               ].map(item => (
                 <div key={item.label} className="flex items-start gap-4 p-4 bg-secondary rounded-lg border border-border">

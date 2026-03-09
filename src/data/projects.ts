@@ -5,6 +5,7 @@ import project4 from "@/assets/project-4.jpg";
 import project5 from "@/assets/project-5.jpg";
 import project6 from "@/assets/project-6.jpg";
 import project7 from "@/assets/project-7.jpg";
+import project8 from "@/assets/project-8.jpg";
 
 export interface Project {
   id: string;
@@ -100,7 +101,7 @@ export const projects: Project[] = [
     location: "Iyamu, Lekki, Lagos",
     status: "active",
     progress: 10,
-    image: project2,
+    image: project8,
     units: 8,
     availableUnits: 1,
     priceRange: "$310,000 - $400,000",
@@ -174,8 +175,8 @@ export const apartments: Apartment[] = [
   { id: "apt-6", projectId: "RAG", projectName: "THE ROCK APARTMENT", name: "Unit 22A - Family Suite", bedrooms: 3, bathrooms: 2, area: 1950, floor: 22, price: 680000, image: project3, available: true, amenities: ["Vertical Garden", "Co-working Access", "Kids Area"] },
   { id: "apt-7", projectId: "GPI", projectName: "THE GOOD PLACE", name: "Unit 55A - Ultra Lux", bedrooms: 4, bathrooms: 4, area: 5000, floor: 55, price: 2400000, image: project1, available: true, amenities: ["Smart Home AI", "Wine Cellar", "Private Cinema"] },
   { id: "apt-8", projectId: "GPI", projectName: "THE GOOD PLACE", name: "Unit 20B - Executive", bedrooms: 2, bathrooms: 2, area: 1400, floor: 20, price: 680000, image: project1, available: true, amenities: ["City View", "Home Office", "Concierge"] },
-  { id: "apt-9", projectId: "GPL", projectName: "THE GOOD PLACE", name: "Unit 15C - Smart Suite", bedrooms: 2, bathrooms: 1, area: 1100, floor: 15, price: 390000, image: project2, available: true, amenities: ["5G Enabled", "Smart Locks", "Pod Parking"] },
-  { id: "apt-10", projectId: "GPL", projectName: "THE GOOD PLACE", name: "Unit 38A - Sky Loft", bedrooms: 3, bathrooms: 2, area: 2200, floor: 38, price: 920000, image: project2, available: true, amenities: ["Duplex", "Drone Delivery", "AI Concierge"] },
+  { id: "apt-9", projectId: "GPL", projectName: "THE GOOD PLACE", name: "Unit 15C - Smart Suite", bedrooms: 2, bathrooms: 1, area: 1100, floor: 15, price: 390000, image: project8, available: true, amenities: ["5G Enabled", "Smart Locks", "Pod Parking"] },
+  { id: "apt-10", projectId: "GPL", projectName: "THE GOOD PLACE", name: "Unit 38A - Sky Loft", bedrooms: 3, bathrooms: 2, area: 2200, floor: 38, price: 920000, image: project8, available: true, amenities: ["Duplex", "Drone Delivery", "AI Concierge"] },
 ];
 
 export const testimonials = [
