@@ -25,31 +25,34 @@ import titi from "../assets/images/titi.jpg";
 import mary from "../assets/images/mary.jpg";
 import douglas from "../assets/images/douglas.jpg";
 import moses from "../assets/images/moses.jpg";
+import aba from "../assets/images/aba.png";
+import wale from "../assets/images/wale.png";
 
 const teamImages = [teamImage, teamImage1, teamImage2];
 
 const leadership = [
-  { name: "Toba Ooye", role: "CEO & Founder", desc: "25+ years in construction and real estate development", image: toba },
-  { name: "Oluwafunmbi Ajayi", role: "QA/QC Manager", desc: "Award-winning high-rise designer", image: funmbi },
-  { name: "Oluseyi Olure", role: "QA/QC Manager", desc: "Engineering excellence specialist", image: seyi },
-  { name: "Gabriel Oluwadurotimi", role: "MEP Manager", desc: "Electrical excellence specialist", image: gabriel },
-  { name: "Akorede Akinpelu", role: "Survey Manager", desc: "Surveying specialist", image: korede },
-  { name: "Joseph Ogunleye", role: "QA/QC Asst. Manager", desc: "Engineering excellence specialist", image: seyi },
-  { name: "Hephzibah Otuene", role: "Project Manager", desc: "Strategic administrative leadership", image: hebz },
-  { name: "Dorcas Akpan", role: "QS Assistant", desc: "Project Cost Analyst", image: dorcas },
-  { name: "Pemunu Esheyigba", role: "QS Assistant", desc: "Project Cost Analyst", image: pemu },
-  { name: "Akeem Aremu", role: "QS Assistant", desc: "Project Cost Analyst", image: akeem },
-  { name: "Pelumi Arinloye", role: "Project Support", desc: "Project Schedule Analyst", image: pelu },
-  { name: "Ifeoluwa Bolaji", role: "QA/QC Assistant", desc: "Project Design Assistant", image: ife },
-  { name: "Ruth Odunayo", role: "QA/QC Assistant", desc: "Project Design Assistant", image: ruth },
-  { name: "Foyeke Oyedokun", role: "QA/QC Assistant", desc: "Project Design Assistant", image: titi },
-  { name: "Ridwan Atanda", role: "Construction Manager, GPI", desc: "Efficient construction professional", image: floyd },
-  { name: "Afolakemi Talabi", role: "Construction Manager, GPL", desc: "Efficient construction professional", image: floyd },
-  { name: "Sodiq Adebanji", role: "Construction Manager, M6M", desc: "Efficient construction professional", image: floyd },
-  { name: "Mary Obafemi", role: "Construction Manager, MOM", desc: "Efficient construction professional", image: mary },
-  { name: "Moses Ogunfowora", role: "Construction Manager, RAG", desc: "Efficient construction professional", image: moses },
-  { name: "Olalekan Abanikanda", role: "Construction Manager, SPA", desc: "Efficient construction professional", image: floyd },
-  { name: "Douglas Igbinedion", role: "Construction Manager, TAC", desc: "Efficient construction professional", image: douglas },
+  { name: "Toba Ooye", role: "CEO & Founder",   image: toba },
+  { name: "Oluwafunmbi Ajayi", role: "QA/QC Manager",image: funmbi },
+  { name: "Oluseyi Olure", role: "QA/QC Manager", image: seyi },
+  { name: "Gabriel Oluwadurotimi", role: "MEP Manager",  image: gabriel },
+  { name: "Akorede Akinpelu", role: "Survey Manager",image: korede },
+  { name: "Joseph Ogunleye", role: "QA/QC Asst. Manager",  image: seyi },
+  { name: "Hephzibah Otuene", role: "Project Manager",image: hebz },
+  { name: "Dorcas Akpan", role: "QS Assistant",image: dorcas },
+  { name: "Pemunu Esheyigba", role: "QS Assistant", image: pemu },
+  { name: "Akeem Aremu", role: "QS Assistant",  image: akeem },
+  { name: "Pelumi Arinloye", role: "Project Support", image: pelu },
+  { name: "Ifeoluwa Bolaji", role: "QA/QC Assistant", image: ife },
+  { name: "Ruth Odunayo", role: "QA/QC Assistant", image: ruth },
+  { name: "Foyeke Oyedokun", role: "QA/QC Assistant", image: titi },
+  { name: "Floyd Adada", role: "QA/QC Assistant",image: floyd },
+  { name: "Ridwan Atanda", role: "Construction Manager, GPI",image: floyd },
+  { name: "Afolakemi Talabi", role: "Construction Manager, GPL", image: floyd },
+  { name: "Sodiq Adebanji", role: "Construction Manager, M6M", image: wale },
+  { name: "Mary Obafemi", role: "Construction Manager, MOM", image: mary },
+  { name: "Moses Ogunfowora", role: "Construction Manager, RAG", image: moses },
+  { name: "Olalekan Abanikanda", role: "Construction Manager, SPA", image: aba },
+  { name: "Douglas Igbinedion", role: "Construction Manager, TAC", image: douglas },
 ];
 
 const About = () => {
@@ -149,7 +152,6 @@ const About = () => {
               </div>
               <h4 className="font-display text-lg font-semibold text-foreground">{member.name}</h4>
               <div className="text-gold text-sm font-medium">{member.role}</div>
-              <p className="text-xs text-muted-foreground mt-2">{member.desc}</p>
             </div>
           ))}
         </div>

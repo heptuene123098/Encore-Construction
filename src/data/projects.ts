@@ -141,7 +141,7 @@ export const projects: Project[] = [
     name: "THE ONE VILLA",
     location: "5, Lugard Avenue, Ikoyi, Lagos",
     status: "completed",
-    completionYear: 2024,
+    completionYear: 2025,
     image: project7,
     units: 12,
     availableUnits: 1,
