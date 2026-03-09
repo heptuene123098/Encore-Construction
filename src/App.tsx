@@ -18,7 +18,6 @@ import Testimonials from "./pages/Testimonials";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
-
 const queryClient = new QueryClient();
 
 const App = () => (
