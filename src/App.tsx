@@ -16,6 +16,9 @@ import Gallery from "./pages/Gallery";
 import Blog from "./pages/Blog";
 import Testimonials from "./pages/Testimonials";
 import Contact from "./pages/Contact";
+import MortgageCalculator from "./pages/MortgageCalculator";
+import Investors from "./pages/Investors";
+import ProjectMap from "./pages/ProjectMap";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
