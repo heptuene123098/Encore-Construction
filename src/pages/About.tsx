@@ -144,14 +144,20 @@ const About = () => {
           <span className="text-gold text-sm font-semibold tracking-widest uppercase">Leadership</span>
           <h2 className="font-display text-3xl font-bold text-foreground mt-2">Meet Our <span className="text-gold-gradient">Team</span></h2>
         </div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {leadership.map((member) => (
-            <div key={member.name} className="text-center p-6 bg-card rounded-lg border border-border shadow-sm">
-              <div className="w-20 h-20 gold-gradient rounded-full mx-auto mb-4 flex items-center justify-center">
-                <img src={member.image} alt={member.name} className="w-full rounded-full object-cover" />
+            <div key={member.name} className="bg-card rounded-lg border border-border shadow-sm overflow-hidden group hover:shadow-lg transition-shadow">
+              <div className="aspect-square overflow-hidden">
+                <img src={member.image} alt={member.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
               </div>
-              <h4 className="font-display text-lg font-semibold text-foreground">{member.name}</h4>
-              <div className="text-gold text-sm font-medium">{member.role}</div>
+              <div className="p-4">
+                <h4 className="font-display text-base font-semibold text-foreground">{member.name}</h4>
+                <div className="text-gold text-sm font-medium mb-2">{member.role}</div>
+                <p className="text-xs text-muted-foreground mb-3">{member.bio}</p>
+                <a href="#" className="inline-flex items-center gap-1 text-xs text-muted-foreground hover:text-gold transition-colors">
+                  <Linkedin className="w-3.5 h-3.5" /> LinkedIn
+                </a>
+              </div>
             </div>
           ))}
         </div>
