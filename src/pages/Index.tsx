@@ -5,11 +5,20 @@ import heroImage from "@/assets/hero-skyline.jpg";
 import interiorImage from "@/assets/interior-luxury.jpg";
 import { projects, testimonials } from "@/data/projects";
 import ProjectCard from "@/components/ProjectCard";
+import PartnersMarquee from "@/components/PartnersMarquee";
 import partner1 from "@/assets/partners/RM.png";
 import partner2 from "@/assets/partners/cemex.png";
 import partner3 from "@/assets/partners/HSA.png";
 import partner4 from "@/assets/partners/fg.webp";
 import partner5 from "@/assets/partners/LG.png";
+
+const partnerLogos = [
+  { src: partner1, name: "RM" },
+  { src: partner2, name: "Cemex" },
+  { src: partner3, name: "HSA" },
+  { src: partner4, name: "FG" },
+  { src: partner5, name: "LG" },
+];
 
 const stats = [
   { icon: Clock, value: "3+", label: "Years of Excellence" },
