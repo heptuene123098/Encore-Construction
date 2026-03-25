@@ -27,7 +27,7 @@ const stats = [
   { icon: TrendingUp, value: "$2M+", label: "In Development" },
 ];
 
-const partners = [partner1, partner2, partner3, partner4, partner5];
+
 
 const Index = () => {
   const featuredProjects = projects.filter(p => p.status === "active").slice(0, 3);
