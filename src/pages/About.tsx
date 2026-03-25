@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { Target, Eye, Award, Shield, Building2, ChevronRight } from "lucide-react";
+import { Target, Eye, Award, Shield, Building2, ChevronRight, Linkedin } from "lucide-react";
 
 import teamImage from "@/assets/team.jpg";
 import teamImage1 from "@/assets/team1.jpg";
