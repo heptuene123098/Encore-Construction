@@ -137,20 +137,7 @@ const Index = () => {
           </h2>
         </div>
 
-        <div className="relative w-full overflow-hidden">
-          <div className="flex gap-16 animate-partners whitespace-nowrap">
-
-            {[...partners, ...partners].map((logo, i) => (
-              <img
-                key={i}
-                src={logo}
-                alt="Partner"
-                className="h-16 opacity-80 hover:opacity-100 transition"
-              />
-            ))}
-
-          </div>
-        </div>
+        <PartnersMarquee logos={partnerLogos} />
 
       </div>
     </section>
