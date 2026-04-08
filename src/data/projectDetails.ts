@@ -19,8 +19,6 @@ import project2j from "@/assets/project-2j.jpg";
 import project2k from "@/assets/project-2k.jpg";
 import project2l from "@/assets/project-2l.jpg";
 import project2m from "@/assets/project-2m.jpg";
-import project2n from "@/assets/Madison6.mp4";
-
 
 export interface NearbyAmenity {
   name: string;
@@ -43,6 +41,25 @@ export interface ProjectGallery {
   liveUpdates: LiveUpdate[];
 }
 
+export interface ProjectVideo {
+  id: string;
+  title: string;
+  url: string;
+  thumbnail?: string;
+  duration?: string;
+  type: 'walkthrough' | 'drone' | 'construction' | 'virtual-tour' | 'interview';
+  description?: string;
+}
+
+export interface ProjectBrochure {
+  pdfUrl: string;
+  previewImage?: string;
+  fileSize?: string;
+  pages?: number;
+  languages?: string[];
+  mobileOptimized?: boolean;
+}
+
 export interface ProjectDetail {
   id: string;
   slug: string;
@@ -51,15 +68,14 @@ export interface ProjectDetail {
   bedrooms: string;
   builtArea: string;
   locationCoordinates: { lat: number; lng: number };
-  videoUrl?: string;
-  videoThumbnail?: string;
+  videos: ProjectVideo[];
   overviewWriteup: string;
   experienceWriteup: string;
   unitFeatures: string[];
   onSiteAmenities: { category: string; items: string[] }[];
   nearbyAmenities: NearbyAmenity[];
   gallery: ProjectGallery;
-  brochureUrl?: string;
+  brochure?: ProjectBrochure;
 }
 
 const defaultFeatures = [
@@ -95,7 +111,35 @@ export const projectDetails: Record<string, ProjectDetail> = {
     bedrooms: "4 Bedrooms",
     builtArea: "107,629 sq.ft",
     locationCoordinates: { lat: 6.4541, lng: 3.4382 },
-    videoUrl: "https://res.cloudinary.com/dgehp9vjb/video/upload/v1762141424/M6_M_2_1_1_1_1_68df199b1b.mp4","project2n",
+    videos: [
+      {
+        id: "m6m-walkthrough",
+        title: "MAISON 6 Full Walkthrough",
+        url: "https://res.cloudinary.com/dgehp9vjb/video/upload/v1762141424/M6_M_2_1_1_1_1_68df199b1b.mp4",
+        thumbnail: project2a,
+        duration: "3:45",
+        type: "walkthrough",
+        description: "Take a complete tour of the MAISON 6 luxury terrace duplex"
+      },
+      {
+        id: "m6m-drone",
+        title: "Aerial View - Drone Footage",
+        url: "https://res.cloudinary.com/dgehp9vjb/video/upload/v1762141424/M6_M_2_1_1_1_1_68df199b1b.mp4",
+        thumbnail: project2d,
+        duration: "2:10",
+        type: "drone",
+        description: "Stunning aerial views of MAISON 6 and the Ikoyi skyline"
+      },
+      {
+        id: "m6m-construction",
+        title: "Construction Progress Update",
+        url: "https://res.cloudinary.com/dgehp9vjb/video/upload/v1762141424/M6_M_2_1_1_1_1_68df199b1b.mp4",
+        thumbnail: project2j,
+        duration: "1:30",
+        type: "construction",
+        description: "Latest construction progress at MAISON 6"
+      },
+    ],
     overviewWriteup: `MAISON 6 is a stunning 4-floor terrace development located on the prestigious 6 Mosely Road in Ikoyi, Lagos. Designed with an unwavering commitment to architectural excellence, each terrace duplex offers panoramic views of the Ikoyi skyline and the Lagos Lagoon.\n\nThe development features a contemporary design philosophy that blends clean geometric lines with warm natural materials. Every unit is meticulously crafted with imported Italian marble, floor-to-ceiling glazing, and bespoke joinery that reflects the highest standards of luxury living.`,
     experienceWriteup: `Living at MAISON 6 means embracing a lifestyle of unparalleled sophistication. Residents enjoy exclusive access to a rooftop infinity pool, a state-of-the-art fitness center, and a private concierge service.\n\nIdeal for discerning families and executives who demand the very best, MAISON 6 offers exceptional investment potential with projected annual returns of 18-22%. The Ikoyi location ensures proximity to premium schools, hospitals, shopping destinations, and the city's finest dining establishments.`,
     unitFeatures: defaultFeatures,
@@ -119,7 +163,13 @@ export const projectDetails: Record<string, ProjectDetail> = {
         { image: project2m, date: "2025-09-01", caption: "Project completed, final inspections underway", progressPercentage: 100 },
       ],
     },
-    brochureUrl: "https://res.cloudinary.com/dgehp9vjb/image/upload/v1768247863/Maison_Six_Moseley_Ikoyi_Brochure_compressed_5854fe59f0.pdf"
+    brochure: {
+      pdfUrl: "https://res.cloudinary.com/dgehp9vjb/image/upload/v1768247863/Maison_Six_Moseley_Ikoyi_Brochure_compressed_5854fe59f0.pdf",
+      previewImage: project2,
+      fileSize: "2.5 MB",
+      pages: 12,
+      languages: ["English"],
+    },
   },
   MOM: {
     id: "MOM",
@@ -129,6 +179,17 @@ export const projectDetails: Record<string, ProjectDetail> = {
     bedrooms: "2, 3, 5 Bedrooms",
     builtArea: "1,200 - 4,500 sq ft",
     locationCoordinates: { lat: 6.4281, lng: 3.4219 },
+    videos: [
+      {
+        id: "mom-walkthrough",
+        title: "Rock Apartment Tour",
+        url: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+        thumbnail: project4,
+        duration: "4:20",
+        type: "walkthrough",
+        description: "Experience the luxury of Rock Apartment on Muri Okunola"
+      },
+    ],
     overviewWriteup: `THE ROCK APARTMENT on Muri Okunola Extension stands as a beacon of modern architecture on Victoria Island. This 6-floor masterpiece offers a curated selection of apartments and maisonettes designed for those who appreciate the finer things in life.\n\nEvery detail has been carefully considered — from the imported stone cladding on the façade to the smart home systems integrated into each unit. The development maximizes natural light and ventilation while maintaining complete privacy for residents.`,
     experienceWriteup: `Victoria Island's most coveted address offers residents a lifestyle that seamlessly blends work and leisure. With panoramic ocean views, a world-class swimming pool, and dedicated concierge services, THE ROCK APARTMENT redefines urban luxury.\n\nStrategically located near major business districts, premium restaurants, and cultural landmarks, this development offers exceptional returns for investors, with property values in the area appreciating at 15-20% annually.`,
     unitFeatures: defaultFeatures,
@@ -158,6 +219,7 @@ export const projectDetails: Record<string, ProjectDetail> = {
     bedrooms: "1, 3 Bedrooms",
     builtArea: "650 - 1,950 sq ft",
     locationCoordinates: { lat: 6.4498, lng: 3.4345 },
+    videos: [],
     overviewWriteup: `THE ROCK APARTMENT on 17 Glover Road embraces sustainable design without compromising on luxury. This 7-floor eco-friendly complex features vertical gardens, energy-efficient systems, and biophilic design principles that bring nature into every living space.\n\nThe architectural vision integrates green terraces at every level, creating a living, breathing building that stands apart from conventional developments.`,
     experienceWriteup: `Residents enjoy the perfect balance of city convenience and natural tranquility. The vertical gardens reduce urban heat, improve air quality, and create a serene environment unique to this development.\n\nWith Glover Road's established prestige and the growing demand for sustainable luxury, property values here are projected to appreciate significantly.`,
     unitFeatures: [...defaultFeatures, "Vertical garden access", "Rainwater harvesting", "Solar panels"],
@@ -186,6 +248,17 @@ export const projectDetails: Record<string, ProjectDetail> = {
     bedrooms: "2, 4 Bedrooms",
     builtArea: "1,400 - 5,000 sq ft",
     locationCoordinates: { lat: 6.4355, lng: 3.4783 },
+    videos: [
+      {
+        id: "gpi-virtual",
+        title: "360° Virtual Tour",
+        url: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+        thumbnail: project1,
+        duration: "5:00",
+        type: "virtual-tour",
+        description: "Immersive 360° tour of The Good Place smart apartments"
+      },
+    ],
     overviewWriteup: `THE GOOD PLACE in Ilasan represents the future of residential living. This 5-floor ultra-luxury development integrates cutting-edge smart home technology, AI-powered concierge services, and sustainable energy systems.\n\nEvery apartment comes equipped with voice-controlled lighting, automated climate systems, and a dedicated home automation hub.`,
     experienceWriteup: `Designed for tech-savvy professionals and forward-thinking families, THE GOOD PLACE offers a living experience that adapts to your lifestyle. The smart home AI learns your preferences and optimizes energy usage, comfort, and security automatically.\n\nWith Lekki's rapid development trajectory, early investors stand to benefit from substantial capital appreciation and strong rental yields.`,
     unitFeatures: [...defaultFeatures, "AI-powered home automation", "Voice-controlled lighting", "Automated climate control"],
@@ -213,6 +286,7 @@ export const projectDetails: Record<string, ProjectDetail> = {
     bedrooms: "2, 3 Bedrooms",
     builtArea: "1,100 - 2,200 sq ft",
     locationCoordinates: { lat: 6.4312, lng: 3.4801 },
+    videos: [],
     overviewWriteup: `THE GOOD PLACE in Iyamu, Lekki is a boutique 3-floor smart tower designed for the modern professional. With only 8 exclusive units, this intimate development prioritizes privacy, smart living, and architectural distinction.\n\nThe building features cutting-edge 5G infrastructure, AI-powered building management, and sustainable design elements.`,
     experienceWriteup: `This boutique development offers an exclusive community of like-minded professionals. With drone delivery capabilities and pod parking, THE GOOD PLACE anticipates the future of urban living.\n\nLimited availability makes this an exceptional investment opportunity in one of Lagos' fastest-appreciating corridors.`,
     unitFeatures: defaultFeatures,
@@ -243,6 +317,17 @@ export const projectDetails: Record<string, ProjectDetail> = {
     bedrooms: "2, 3, 4 Bedrooms",
     builtArea: "1,500 - 3,500 sq ft",
     locationCoordinates: { lat: 6.4523, lng: 3.4298 },
+    videos: [
+      {
+        id: "spa-interview",
+        title: "Architect's Vision",
+        url: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+        thumbnail: project6,
+        duration: "6:15",
+        type: "interview",
+        description: "Lead architect discusses the design philosophy behind The Stainless Point"
+      },
+    ],
     overviewWriteup: `THE STAINLESS POINT on Luggard Avenue, Ikoyi, is an 8-floor premium development that embodies timeless elegance. With 16 meticulously designed units, this project combines classical architectural elements with modern luxury.\n\nThe development features premium stainless steel accents, imported stone finishes, and expansive living spaces that maximize the stunning Ikoyi views.`,
     experienceWriteup: `Luggard Avenue is one of Ikoyi's most prestigious addresses, home to embassies, corporate headquarters, and ultra-high-net-worth individuals. THE STAINLESS POINT offers residents an address that commands respect and delivers exceptional lifestyle quality.\n\nWith all 16 units available, early buyers enjoy the best unit selection and pre-launch pricing advantages.`,
     unitFeatures: defaultFeatures,
@@ -269,6 +354,26 @@ export const projectDetails: Record<string, ProjectDetail> = {
     bedrooms: "2, 3, 4 Bedrooms",
     builtArea: "1,200 - 3,800 sq ft",
     locationCoordinates: { lat: 6.4378, lng: 3.4694 },
+    videos: [
+      {
+        id: "rbm-walkthrough",
+        title: "Completed Unit Tour",
+        url: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+        thumbnail: project5,
+        duration: "4:50",
+        type: "walkthrough",
+        description: "Tour a completed unit at Rock Apartment Lekki"
+      },
+      {
+        id: "rbm-drone",
+        title: "Aerial Drone View",
+        url: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+        thumbnail: project7,
+        duration: "1:45",
+        type: "drone",
+        description: "Bird's eye view of the completed development"
+      },
+    ],
     overviewWriteup: `THE ROCK APARTMENT on Olu Babajide Close is our proudly completed neo-classical masterpiece. This 8-floor development features 16 exquisitely finished apartments that blend timeless design with contemporary living standards.\n\nDelivered in 2024, this project showcases our commitment to quality, on-time delivery, and architectural distinction.`,
     experienceWriteup: `Residents of this completed development enjoy the full range of premium amenities including a private library, ballroom, butler service, and art gallery. The Freedom Way location provides easy access to Lekki's vibrant commercial and entertainment corridor.\n\nAs a completed project, buyers benefit from immediate occupancy and proven quality — no construction risk, just move-in-ready luxury.`,
     unitFeatures: defaultFeatures,
@@ -297,6 +402,7 @@ export const projectDetails: Record<string, ProjectDetail> = {
     bedrooms: "3, 4 Bedrooms",
     builtArea: "2,000 - 4,200 sq ft",
     locationCoordinates: { lat: 6.4531, lng: 3.4275 },
+    videos: [],
     overviewWriteup: `THE ONE VILLA on 5 Lugard Avenue is an exclusive boutique development completed in 2025. With only 12 units across 4 floors, this development offers an unmatched level of privacy and exclusivity in one of Ikoyi's most sought-after locations.\n\nEach unit features a private pool, sky lounge access, and bespoke interior design by internationally acclaimed designers.`,
     experienceWriteup: `THE ONE VILLA is designed for those who seek absolute exclusivity. With only 3 units per floor, residents enjoy unparalleled privacy, dedicated valet parking, and a pet-friendly environment complete with a luxury pet spa.\n\nWith only 1 unit remaining, this is a rare opportunity to own a piece of Ikoyi's most exclusive address.`,
     unitFeatures: [...defaultFeatures, "Private pool per unit", "Bespoke interior design", "Pet-friendly with pet spa"],
