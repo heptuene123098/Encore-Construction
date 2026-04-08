@@ -6,6 +6,21 @@ import project5 from "@/assets/project-5.jpg";
 import project6 from "@/assets/project-6.jpg";
 import project7 from "@/assets/project-7.jpg";
 import project8 from "@/assets/project-8.jpg";
+import project2a from "@/assets/project-2a.jpg";
+import project2b from "@/assets/project-2b.jpg";
+import project2c from "@/assets/project-2c.jpg";
+import project2d from "@/assets/project-2d.jpg";
+import project2e from "@/assets/project-2e.jpg";
+import project2f from "@/assets/project-2f.jpg";
+import project2g from "@/assets/project-2g.png";
+import project2h from "@/assets/project-2h.png";
+import project2i from "@/assets/project-2i.png";
+import project2j from "@/assets/project-2j.jpg";
+import project2k from "@/assets/project-2k.jpg";
+import project2l from "@/assets/project-2l.jpg";
+import project2m from "@/assets/project-2m.jpg";
+import project2n from "@/assets/Madison6.mp4";
+
 
 export interface NearbyAmenity {
   name: string;
@@ -78,9 +93,9 @@ export const projectDetails: Record<string, ProjectDetail> = {
     tagline: "Where Luxury Meets Legacy in the Heart of Ikoyi",
     propertyType: "Luxury Terrace Duplex",
     bedrooms: "4 Bedrooms",
-    builtArea: "3,200 - 4,500 sq ft",
+    builtArea: "107,629 sq.ft",
     locationCoordinates: { lat: 6.4541, lng: 3.4382 },
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    videoUrl: "https://res.cloudinary.com/dgehp9vjb/video/upload/v1762141424/M6_M_2_1_1_1_1_68df199b1b.mp4","project2n",
     overviewWriteup: `MAISON 6 is a stunning 4-floor terrace development located on the prestigious 6 Mosely Road in Ikoyi, Lagos. Designed with an unwavering commitment to architectural excellence, each terrace duplex offers panoramic views of the Ikoyi skyline and the Lagos Lagoon.\n\nThe development features a contemporary design philosophy that blends clean geometric lines with warm natural materials. Every unit is meticulously crafted with imported Italian marble, floor-to-ceiling glazing, and bespoke joinery that reflects the highest standards of luxury living.`,
     experienceWriteup: `Living at MAISON 6 means embracing a lifestyle of unparalleled sophistication. Residents enjoy exclusive access to a rooftop infinity pool, a state-of-the-art fitness center, and a private concierge service.\n\nIdeal for discerning families and executives who demand the very best, MAISON 6 offers exceptional investment potential with projected annual returns of 18-22%. The Ikoyi location ensures proximity to premium schools, hospitals, shopping destinations, and the city's finest dining establishments.`,
     unitFeatures: defaultFeatures,
@@ -94,15 +109,17 @@ export const projectDetails: Record<string, ProjectDetail> = {
       { name: "Ikoyi Baptist Church", category: "Worship", distance: "0.3 km", icon: "church" },
     ],
     gallery: {
-      interior: [project2, project1, project4],
-      exterior: [project2, project3, project6],
-      floorPlans: [project2],
+      interior: [project2a, project2b, project2c],
+      exterior: [project2, project2d, project2e, project2f],
+      floorPlans: [project2g, project2h, project2i],
       liveUpdates: [
-        { image: project2, date: "2025-01-15", caption: "Foundation work completed", progressPercentage: 30 },
-        { image: project3, date: "2025-03-10", caption: "Structural framework at 60%", progressPercentage: 60 },
-        { image: project1, date: "2025-06-01", caption: "Interior finishing in progress", progressPercentage: 90 },
+        { image: project2j, date: "2025-01-15", caption: "Foundation work completed", progressPercentage: 30 },
+        { image: project2k, date: "2025-03-10", caption: "Structural framework at 60%", progressPercentage: 60 },
+        { image: project2l, date: "2025-06-01", caption: "Interior finishing in progress", progressPercentage: 90 },
+        { image: project2m, date: "2025-09-01", caption: "Project completed, final inspections underway", progressPercentage: 100 },
       ],
     },
+    brochureUrl: "https://res.cloudinary.com/dgehp9vjb/image/upload/v1768247863/Maison_Six_Moseley_Ikoyi_Brochure_compressed_5854fe59f0.pdf"
   },
   MOM: {
     id: "MOM",
