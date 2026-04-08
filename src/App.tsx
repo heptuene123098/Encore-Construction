@@ -19,6 +19,7 @@ import Contact from "./pages/Contact";
 import MortgageCalculator from "./pages/MortgageCalculator";
 import Investors from "./pages/Investors";
 import ProjectMap from "./pages/ProjectMap";
+import ProjectDetail from "./pages/ProjectDetail";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
