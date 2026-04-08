@@ -19,6 +19,7 @@ import Contact from "./pages/Contact";
 import MortgageCalculator from "./pages/MortgageCalculator";
 import Investors from "./pages/Investors";
 import ProjectMap from "./pages/ProjectMap";
+import ProjectDetail from "./pages/ProjectDetail";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -36,6 +37,7 @@ const App = () => (
             <Route path="/about" element={<About />} />
             <Route path="/about-us" element={<About />} />
             <Route path="/projects" element={<Projects />} />
+            <Route path="/projects/:id" element={<ProjectDetail />} />
             <Route path="/properties" element={<Properties />} />
             <Route path="/enquiry" element={<Enquiry />} />
             <Route path="/reserve/:id" element={<Reserve />} />
