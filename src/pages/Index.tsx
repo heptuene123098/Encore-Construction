@@ -24,7 +24,7 @@ const stats = [
   { icon: Clock, value: "3+", label: "Years of Excellence" },
   { icon: Building2, value: "10", label: "Landmark Projects" },
   { icon: Users, value: "100+", label: "Happy Homeowners" },
-  { icon: TrendingUp, value: "$2M+", label: "In Development" },
+  { icon: TrendingUp, value: "₦2B+", label: "In Development" },
 ];
 
 
@@ -47,8 +47,8 @@ const Index = () => {
               Building Tomorrow's <span className="text-gold-gradient">Encore</span> Today
             </h1>
             <p className="text-lg text-primary-foreground/80 mb-8 max-w-xl font-body">
-              Encore Construction crafts iconic high-rise residences that redefine luxury living. 
-              With 10 landmark projects, we're shaping cities of the future.
+              As the construction arm of Rockmould Limited, Encore Construction crafts iconic high-rise residences that redefine luxury living. 
+              With 10 landmark projects, we are shaping the cities of tomorrow.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button variant="gold" size="lg" asChild>
@@ -87,11 +87,11 @@ const Index = () => {
               Redefining Urban <span className="text-gold-gradient">Excellence</span>
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-6">
-              For over 3 years, Elevate Developments has been at the forefront of luxury high-rise construction. 
-              Our commitment to quality, innovation, and timely delivery has made us one of the most trusted names 
-              in real estate development. With 5 active projects and 5 completed masterpieces, we continue to push 
-              boundaries in architectural excellence.
-            </p>
+            As the construction arm of Rockmould Limited, Encore Construction stands at the forefront of luxury high-rise development.  
+            Our commitment to quality, innovation, and timely delivery has positioned us as a trusted force in shaping modern urban landscapes.  
+
+            With 10 landmark projects spanning both active developments and completed masterpieces we continue to push the boundaries of architectural excellence.
+     </p>
             <Button variant="navy" asChild>
               <Link to="/about">Learn More About Us <ChevronRight className="w-4 h-4" /></Link>
             </Button>

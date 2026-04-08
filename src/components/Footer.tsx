@@ -55,7 +55,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-12 pt-8 border-t border-gold/10 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-primary-foreground/50">© 2026 GANL. All rights reserved.</p>
+          <p className="text-sm text-primary-foreground/50">© 2026 <a href="https://gemamethystngltd.vercel.app" className="hover:text-gold transition-colors" target="_blank">GANL</a> All rights reserved.</p>
           <div className="flex gap-6 text-sm text-primary-foreground/50">
             <Link to="/privacy" className="hover:text-gold transition-colors">Privacy Policy</Link>
             <Link to="/terms" className="hover:text-gold transition-colors">Terms of Service</Link>

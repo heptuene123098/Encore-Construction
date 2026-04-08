@@ -89,17 +89,15 @@ const About = () => {
 
           <div>
             <h2 className="font-display text-3xl font-bold text-foreground mb-4">
-              Crafting <span className="text-gold-gradient">Iconic</span> Skylines Since 202
+              Crafting <span className="text-gold-gradient">Iconic</span> Skylines Since 2021
             </h2>
 
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Founded with a bold vision to redefine urban living, Elevate Developments has rapidly established 
-              itself as a premier high-rise construction and real estate development company.
+              Founded with a bold vision to redefine urban living, Encore Construction has rapidly established itself as a premier high-rise construction company under the Rockmould brand.             
             </p>
 
             <p className="text-muted-foreground leading-relaxed">
-              Our team of world-class architects, engineers, and designers work together to create residences 
-              that are more than buildings—they are communities, statements, and legacies.
+              Our team of world-class architects, engineers, and designers collaborate to create residences that are more than structures they are communities, statements, and enduring legacies.
             </p>
           </div>
 
