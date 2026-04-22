@@ -32,8 +32,8 @@ const Footer = () => {
           <div>
             <h4 className="font-display text-lg font-semibold mb-4 text-gold">Contact</h4>
             <div className="space-y-3">
-              <a href="tel:+2347031071919" className="flex items-center gap-3 text-sm text-primary-foreground/70 hover:text-gold transition-colors">
-                <Phone className="w-4 h-4 text-gold flex-shrink-0" /> +234 703 - 107 - 1919
+              <a href="tel:+23409014954263" className="flex items-center gap-3 text-sm text-primary-foreground/70 hover:text-gold transition-colors">
+                <Phone className="w-4 h-4 text-gold flex-shrink-0" /> +234 901 - 495 - 4263
               </a>
               <a href="mailto:info@encoreconstruction.com" className="flex items-center gap-3 text-sm text-primary-foreground/70 hover:text-gold transition-colors">
                 <Mail className="w-4 h-4 text-gold flex-shrink-0" /> info@encoreconstruction.com

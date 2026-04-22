@@ -47,10 +47,10 @@ const Enquiry = () => {
               <div className="bg-secondary p-6 rounded-lg border border-border">
                 <h3 className="font-display text-lg font-semibold text-foreground mb-4">Contact Info</h3>
                 <div className="space-y-4">
-                  <a href="tel:+1234567890" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-gold transition-colors">
-                    <Phone className="w-5 h-5 text-gold" /> +2347031071919
+                  <a href="tel:+234 901 - 495 - 4263" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-gold transition-colors">
+                    <Phone className="w-5 h-5 text-gold" /> +234 901 - 495 - 4263
                   </a>
-                  <a href="mailto:info@elevate-dev.com" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-gold transition-colors">
+                  <a href="mailto:info@encoreconstruction.com" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-gold transition-colors">
                     <Mail className="w-5 h-5 text-gold" /> info@encoreconstruction.com
                   </a>
                   <div className="flex items-start gap-3 text-sm text-muted-foreground">

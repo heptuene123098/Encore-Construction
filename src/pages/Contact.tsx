@@ -43,7 +43,7 @@ const Contact = () => {
             </div>
             <div className="space-y-6">
               {[
-                { icon: Phone, label: "Phone", value: "+2347031071919", href: "tel:+2347031071919" },
+                { icon: Phone, label: "Phone", value: "+234 901 - 495 - 4263", href: "tel:+234 901 - 495 - 4263" },
                 { icon: Mail, label: "Email", value: "info@encore-construction.com", href: "mailto:info@encore-construction.com" },
                 { icon: MapPin, label: "Office", value: "24A Taiye Olowu, Lekki Phase 1, Lagos" },
                 { icon: Clock, label: "Hours", value: "Mon - Fri: 9:00 AM - 6:00 PM" },

@@ -20,6 +20,7 @@ import project2k from "@/assets/project-2k.jpg";
 import project2l from "@/assets/project-2l.jpg";
 import project2m from "@/assets/project-2m.jpg";
 
+
 export interface NearbyAmenity {
   name: string;
   category: string;
@@ -133,7 +134,7 @@ export const projectDetails: Record<string, ProjectDetail> = {
       {
         id: "m6m-construction",
         title: "Construction Progress Update",
-        url: "https://res.cloudinary.com/dgehp9vjb/video/upload/v1762141424/M6_M_2_1_1_1_1_68df199b1b.mp4",
+        url: "https://res.cloudinary.com/dgehp9vjb/video/upload/v1768901297/Madison_6_e327f02f51.mp4",
         thumbnail: project2j,
         duration: "1:30",
         type: "construction",
@@ -167,7 +168,7 @@ export const projectDetails: Record<string, ProjectDetail> = {
       pdfUrl: "https://res.cloudinary.com/dgehp9vjb/image/upload/v1768247863/Maison_Six_Moseley_Ikoyi_Brochure_compressed_5854fe59f0.pdf",
       previewImage: project2,
       fileSize: "2.5 MB",
-      pages: 12,
+      pages: 33,
       languages: ["English"],
     },
   },
