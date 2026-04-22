@@ -10,7 +10,6 @@ import heroImage from "@/assets/hero-skyline.jpg";
 
 import toba from "../assets/images/toba.png";
 import funmbi from "../assets/images/funmbi.png";
-import seyi from "../assets/images/seyi.png";
 import hebz from "../assets/images/hebz.jpg";
 import dorcas from "../assets/images/dorcas.jpg";
 import pemu from "../assets/images/pemu.jpg";
@@ -23,36 +22,34 @@ import ife from "../assets/images/ife.jpg";
 import ruth from "../assets/images/ruth.jpg";
 import titi from "../assets/images/titi.jpg";
 import mary from "../assets/images/mary.jpg";
-import douglas from "../assets/images/douglas.jpg";
 import moses from "../assets/images/moses.jpg";
 import aba from "../assets/images/aba.png";
 import wale from "../assets/images/wale.png";
+import dummy from "../assets/images/dummy.jpg";
 
 const teamImages = [teamImage, teamImage1, teamImage2];
 
 const leadership = [
   { name: "Toba Ooye", role: "CEO & Founder", image: toba, bio: "Visionary leader with 10+ years in construction and real estate development." },
   { name: "Oluwafunmbi Ajayi", role: "QA/QC Manager", image: funmbi, bio: "Ensures world-class quality standards across all projects." },
-  { name: "Oluseyi Olure", role: "QA/QC Manager", image: seyi, bio: "Expert in construction quality assurance and compliance." },
   { name: "Gabriel Oluwadurotimi", role: "MEP Manager", image: gabriel, bio: "Specialist in mechanical, electrical, and plumbing systems." },
   { name: "Akorede Akinpelu", role: "Survey Manager", image: korede, bio: "Precision surveying for all project developments." },
-  { name: "Joseph Ogunleye", role: "QA/QC Asst. Manager", image: seyi, bio: "Supports quality control operations across active sites." },
+  { name: "Joseph Ogunleye", role: "QA/QC Asst. Manager", image: dummy, bio: "Supports quality control operations across active sites." },
   { name: "Hephzibah Otuene", role: "Project Manager", image: hebz, bio: "Drives project delivery within budget and timeline." },
-  { name: "Dorcas Akpan", role: "QS Assistant", image: dorcas, bio: "Cost management and quantity surveying support." },
-  { name: "Pemunu Esheyigba", role: "QS Assistant", image: pemu, bio: "Material estimation and procurement coordination." },
-  { name: "Akeem Aremu", role: "QS Assistant", image: akeem, bio: "Cost tracking and financial reporting." },
+  { name: "Dorcas Akpan", role: "Quantity Surveyor", image: dorcas, bio: "Cost management and quantity surveying support." },
+  { name: "Pemunu Esheyigba", role: "Quantity Surveyor Assistant", image: pemu, bio: "Material estimation and procurement coordination." },
+  { name: "Akeem Aremu", role: "Quantity Surveyor", image: akeem, bio: "Cost tracking and financial reporting." },
   { name: "Pelumi Arinloye", role: "Project Support", image: pelu, bio: "Administrative and logistics coordination." },
   { name: "Ifeoluwa Bolaji", role: "QA/QC Assistant", image: ife, bio: "Site inspection and quality documentation." },
   { name: "Ruth Odunayo", role: "QA/QC Assistant", image: ruth, bio: "Quality assurance testing and reporting." },
   { name: "Foyeke Oyedokun", role: "QA/QC Assistant", image: titi, bio: "Construction compliance and standards." },
   { name: "Floyd Adada", role: "QA/QC Assistant", image: floyd, bio: "Field quality inspections and monitoring." },
   { name: "Ridwan Atanda", role: "Construction Manager, GPI", image: floyd, bio: "Oversees The Good Place Ilasan construction." },
-  { name: "Afolakemi Talabi", role: "Construction Manager, GPL", image: floyd, bio: "Manages The Good Place Iyamu development." },
+  { name: "Afolakemi Talabi", role: "Construction Manager, GPL", image: dummy, bio: "Manages The Good Place Iyamu development." },
   { name: "Sodiq Adebanji", role: "Construction Manager, M6M", image: wale, bio: "Leads Maison 6 Mosely project delivery." },
   { name: "Mary Obafemi", role: "Construction Manager, MOM", image: mary, bio: "Oversees The Rock Apartment Victoria Island." },
   { name: "Moses Ogunfowora", role: "Construction Manager, RAG", image: moses, bio: "Manages The Rock Apartment Glover Road." },
   { name: "Olalekan Abanikanda", role: "Construction Manager, SPA", image: aba, bio: "Leads The Stainless Point development." },
-  { name: "Douglas Igbinedion", role: "Construction Manager, TAC", image: douglas, bio: "Construction management and site operations." },
 ];
 
 const About = () => {
