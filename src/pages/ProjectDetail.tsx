@@ -4,7 +4,7 @@ import {
   MapPin, Building2, BedDouble, Maximize, Home, ChevronRight, Play,
   CheckCircle2, Waves, Dumbbell, TreePine, Baby, Briefcase, Leaf,
   School, Hospital, ShoppingBag, Utensils, Bus, Church, Landmark,
-  Download, Phone, Calculator, CalendarCheck, X, ChevronLeft,
+  Download, Phone, Calculator, X, ChevronLeft,
   ArrowRight, Eye, FileText, Video, Camera, Mic, Globe,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -172,9 +172,6 @@ const ProjectDetailPage = () => {
                 <a href={detail.brochure.pdfUrl} target="_blank" rel="noopener noreferrer"><Download className="w-3.5 h-3.5" /> Brochure</a>
               </Button>
             )}
-            <Button variant="gold" size="sm" className="min-h-[44px] text-xs sm:text-sm" asChild>
-              <Link to={`/reserve/${project.id}`}>Reserve</Link>
-            </Button>
           </div>
         </div>
       </div>
@@ -633,11 +630,6 @@ const ProjectDetailPage = () => {
             <Button variant="outline" size="lg" className="min-h-[48px] w-full sm:w-auto" asChild>
               <Link to="/mortgage-calculator"><Calculator className="w-5 h-5" /> Mortgage Calculator</Link>
             </Button>
-            {project.status === "active" && (
-              <Button variant="navy" size="lg" className="min-h-[48px] w-full sm:w-auto" asChild>
-                <Link to={`/reserve/${project.id}`}><CalendarCheck className="w-5 h-5" /> Reserve a Unit</Link>
-              </Button>
-            )}
           </div>
           <p className="text-muted-foreground text-xs sm:text-sm mt-4 sm:mt-6">
             *Fill out our enquiry form and a representative will contact you within 24 hours
