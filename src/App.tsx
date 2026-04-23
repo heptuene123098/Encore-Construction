@@ -14,7 +14,6 @@ import Gallery from "./pages/Gallery";
 import Blog from "./pages/Blog";
 import Testimonials from "./pages/Testimonials";
 import Contact from "./pages/Contact";
-import MortgageCalculator from "./pages/MortgageCalculator";
 import Investors from "./pages/Investors";
 import ProjectMap from "./pages/ProjectMap";
 import ProjectDetail from "./pages/ProjectDetail";
@@ -41,7 +40,6 @@ const App = () => (
             <Route path="/blog" element={<Blog />} />
             <Route path="/testimonials" element={<Testimonials />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/mortgage-calculator" element={<MortgageCalculator />} />
             <Route path="/investors" element={<Investors />} />
             <Route path="/project-map" element={<ProjectMap />} />
             <Route path="*" element={<NotFound />} />

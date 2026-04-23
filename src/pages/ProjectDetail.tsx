@@ -4,7 +4,7 @@ import {
   MapPin, Building2, BedDouble, Maximize, Home, ChevronRight, Play,
   CheckCircle2, Waves, Dumbbell, TreePine, Baby, Briefcase, Leaf,
   School, Hospital, ShoppingBag, Utensils, Bus, Church, Landmark,
-  Download, Phone, Calculator, X, ChevronLeft,
+  Download, Phone, X, ChevronLeft,
   ArrowRight, Eye, FileText, Video, Camera, Mic, Globe,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -620,14 +620,11 @@ const ProjectDetailPage = () => {
             Interested in <span className="text-gold-gradient">{project.name}</span>?
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto mb-6 sm:mb-8 text-sm sm:text-base">
-            Take the next step towards owning your dream home. Contact our team for a personalized consultation or schedule a private viewing.
+            Get in touch with our team to learn more about this development or schedule a site visit.
           </p>
           <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4">
             <Button variant="gold" size="lg" className="min-h-[48px] w-full sm:w-auto" asChild>
               <Link to={`/enquiry?project=${project.id}`}><Phone className="w-5 h-5" /> Contact Us</Link>
-            </Button>
-            <Button variant="outline" size="lg" className="min-h-[48px] w-full sm:w-auto" asChild>
-              <Link to="/mortgage-calculator"><Calculator className="w-5 h-5" /> Mortgage Calculator</Link>
             </Button>
           </div>
           <p className="text-muted-foreground text-xs sm:text-sm mt-4 sm:mt-6">
