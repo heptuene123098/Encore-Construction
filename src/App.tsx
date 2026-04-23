@@ -9,9 +9,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
-import Properties from "./pages/Properties";
 import Enquiry from "./pages/Enquiry";
-import Reserve from "./pages/Reserve";
 import Gallery from "./pages/Gallery";
 import Blog from "./pages/Blog";
 import Testimonials from "./pages/Testimonials";
@@ -38,9 +36,7 @@ const App = () => (
             <Route path="/about-us" element={<About />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/projects/:id" element={<ProjectDetail />} />
-            <Route path="/properties" element={<Properties />} />
             <Route path="/enquiry" element={<Enquiry />} />
-            <Route path="/reserve/:id" element={<Reserve />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/testimonials" element={<Testimonials />} />

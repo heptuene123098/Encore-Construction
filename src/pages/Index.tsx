@@ -55,9 +55,6 @@ const Index = () => {
                 <Link to="/projects">View Projects <ChevronRight className="w-4 h-4" /></Link>
               </Button>
               <Button variant="heroOutline" size="lg" asChild>
-                <Link to="/properties">Buy an Apartment</Link>
-              </Button>
-              <Button variant="heroOutline" size="lg" asChild>
                 <Link to="/enquiry">Make an Enquiry</Link>
               </Button>
             </div>
@@ -174,14 +171,14 @@ const Index = () => {
       <section className="section-padding bg-secondary">
         <div className="container-wide mx-auto text-center">
           <h2 className="font-display text-3xl sm:text-4xl font-bold text-foreground mb-4">
-            Ready to Find Your <span className="text-gold-gradient">Dream Home</span>?
+            Ready to Build Your <span className="text-gold-gradient">Next Landmark</span>?
           </h2>
           <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
-            Explore our available apartments or speak with our team to find the perfect luxury residence.
+            Explore our portfolio of high-rise developments or speak with our team about your next project.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button variant="gold" size="lg" asChild>
-              <Link to="/properties">Browse Properties</Link>
+              <Link to="/projects">View Projects</Link>
             </Button>
             <Button variant="navy" size="lg" asChild>
               <Link to="/enquiry">Contact Us</Link>
