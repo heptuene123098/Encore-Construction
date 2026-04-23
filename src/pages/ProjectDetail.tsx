@@ -158,7 +158,7 @@ const ProjectDetailPage = () => {
         <div className="container-wide mx-auto px-4 sm:px-6 lg:px-8 py-2 sm:py-3 flex items-center justify-between gap-3 sm:gap-4">
           <div className="flex items-center gap-3 min-w-0">
             <span className="font-display font-semibold text-foreground truncate text-sm sm:text-base">{project.name}</span>
-            <span className="text-accent font-semibold text-xs sm:text-sm hidden sm:inline">{project.priceRange}</span>
+            <span className="text-accent font-semibold text-xs sm:text-sm hidden sm:inline">{project.location}</span>
           </div>
           <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
             <Button variant="outline" size="sm" className="hidden sm:inline-flex min-h-[44px]" asChild>
@@ -179,14 +179,13 @@ const ProjectDetailPage = () => {
       {/* Project Overview */}
       <section className="px-4 sm:px-6 lg:px-8 py-10 sm:py-16 lg:py-20">
         <div className="container-wide mx-auto">
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4 lg:gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4 lg:gap-6">
             {[
               { icon: <Home className="w-5 h-5 text-accent" />, label: "Type", value: detail.propertyType },
               { icon: <BedDouble className="w-5 h-5 text-accent" />, label: "Bedrooms", value: detail.bedrooms },
               { icon: <Maximize className="w-5 h-5 text-accent" />, label: "Built Area", value: detail.builtArea },
               { icon: <Building2 className="w-5 h-5 text-accent" />, label: "Floors", value: `${project.floors} Floors` },
               { icon: <Home className="w-5 h-5 text-accent" />, label: "Units", value: project.availableUnits !== undefined ? `${project.availableUnits} of ${project.units}` : `${project.units} total` },
-              { icon: <MapPin className="w-5 h-5 text-accent" />, label: "Price Range", value: project.priceRange },
             ].map((item, i) => (
               <div key={i} className="bg-secondary rounded-lg p-3 sm:p-4 text-center">
                 <div className="flex justify-center mb-2">{item.icon}</div>
@@ -603,7 +602,7 @@ const ProjectDetailPage = () => {
                       <MapPin className="w-3.5 h-3.5 text-accent" /> {rp.location}
                     </div>
                     <div className="flex items-center justify-between mt-3">
-                      <span className="text-sm font-semibold text-accent">{rp.priceRange}</span>
+                      <span className="text-sm font-semibold text-accent">{rp.floors} Floors · {rp.units} Units</span>
                       <ArrowRight className="w-4 h-4 text-accent" />
                     </div>
                   </div>
