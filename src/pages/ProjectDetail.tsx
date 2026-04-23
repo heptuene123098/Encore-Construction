@@ -158,7 +158,7 @@ const ProjectDetailPage = () => {
         <div className="container-wide mx-auto px-4 sm:px-6 lg:px-8 py-2 sm:py-3 flex items-center justify-between gap-3 sm:gap-4">
           <div className="flex items-center gap-3 min-w-0">
             <span className="font-display font-semibold text-foreground truncate text-sm sm:text-base">{project.name}</span>
-            <span className="text-accent font-semibold text-xs sm:text-sm hidden sm:inline">{project.priceRange}</span>
+            <span className="text-accent font-semibold text-xs sm:text-sm hidden sm:inline">{project.location}</span>
           </div>
           <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
             <Button variant="outline" size="sm" className="hidden sm:inline-flex min-h-[44px]" asChild>
