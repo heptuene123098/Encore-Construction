@@ -1,7 +1,7 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Building2, Award, Users, TrendingUp, ChevronRight, Shield, Clock, Gem, BarChart3, Star } from "lucide-react";
-import heroImage from "@/assets/hero-skyline.jpg";
 import interiorImage from "@/assets/interior-luxury.jpg";
 import { projects, testimonials } from "@/data/projects";
 import ProjectCard from "@/components/ProjectCard";
@@ -31,12 +31,31 @@ const stats = [
 
 const Index = () => {
   const featuredProjects = projects.filter(p => p.status === "active").slice(0, 3);
+  const heroSlides = projects.slice(0, 6);
+  const [activeSlide, setActiveSlide] = useState(0);
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      setActiveSlide((s) => (s + 1) % heroSlides.length);
+    }, 5000);
+    return () => clearInterval(id);
+  }, [heroSlides.length]);
 
   return (
     <div>
       {/* Hero */}
-      <section className="relative min-h-screen flex items-center">
-        <img src={heroImage} alt="Modern skyline at golden hour" className="absolute inset-0 w-full h-full object-cover" />
+      <section className="relative min-h-screen flex items-center overflow-hidden">
+        {heroSlides.map((slide, i) => (
+          <img
+            key={slide.id}
+            src={slide.image}
+            alt={`${slide.name} — ${slide.location}`}
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-[1500ms] ease-in-out ${
+              i === activeSlide ? "opacity-100" : "opacity-0"
+            }`}
+            loading={i === 0 ? "eager" : "lazy"}
+          />
+        ))}
         <div className="absolute inset-0 hero-overlay" />
         <div className="relative z-10 container-wide mx-auto px-4 sm:px-6 lg:px-8 pt-20">
           <div className="max-w-2xl animate-fade-up">
@@ -59,6 +78,20 @@ const Index = () => {
               </Button>
             </div>
           </div>
+        </div>
+
+        {/* Slide indicators */}
+        <div className="absolute bottom-24 left-1/2 -translate-x-1/2 z-10 flex gap-2">
+          {heroSlides.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setActiveSlide(i)}
+              aria-label={`Go to slide ${i + 1}`}
+              className={`h-1.5 rounded-full transition-all ${
+                i === activeSlide ? "w-8 bg-gold" : "w-4 bg-primary-foreground/40 hover:bg-primary-foreground/70"
+              }`}
+            />
+          ))}
         </div>
       </section>
 
