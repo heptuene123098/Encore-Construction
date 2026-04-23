@@ -4,7 +4,7 @@ import {
   MapPin, Building2, BedDouble, Maximize, Home, ChevronRight, Play,
   CheckCircle2, Waves, Dumbbell, TreePine, Baby, Briefcase, Leaf,
   School, Hospital, ShoppingBag, Utensils, Bus, Church, Landmark,
-  Download, Phone, Calculator, CalendarCheck, X, ChevronLeft,
+  Download, Phone, Calculator, X, ChevronLeft,
   ArrowRight, Eye, FileText, Video, Camera, Mic, Globe,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
