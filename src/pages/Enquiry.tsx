@@ -50,8 +50,8 @@ const Enquiry = () => {
                   <a href="tel:+234 901 - 495 - 4263" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-gold transition-colors">
                     <Phone className="w-5 h-5 text-gold" /> +234 901 - 495 - 4263
                   </a>
-                  <a href="mailto:info@encoreconstruction.com" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-gold transition-colors">
-                    <Mail className="w-5 h-5 text-gold" /> info@encoreconstruction.com
+                  <a href="mailto:info@encoreconstruction.org" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-gold transition-colors">
+                    <Mail className="w-5 h-5 text-gold" /> info@encoreconstruction.org
                   </a>
                   <div className="flex items-start gap-3 text-sm text-muted-foreground">
                     <MapPin className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" /> 24A Taiye Olowu, Lekki Phase 1, Lagos
@@ -61,7 +61,7 @@ const Enquiry = () => {
               <div className="bg-secondary rounded-lg border border-border overflow-hidden h-64">
                 <iframe
                   title="Office Location"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.2219901290355!2d-74.00369368400567!3d40.71312937933185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a23e28c1191%3A0x49f75d3281df052a!2s150%20Park%20Row%2C%20New%20York%2C%20NY%2010007!5e0!3m2!1sen!2sus!4v1689880000000!5m2!1sen!2sus"
+                  src="https://www.google.org/maps/embed?pb=!1m18!1m12!1m3!1d3024.2219901290355!2d-74.00369368400567!3d40.71312937933185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a23e28c1191%3A0x49f75d3281df052a!2s150%20Park%20Row%2C%20New%20York%2C%20NY%2010007!5e0!3m2!1sen!2sus!4v1689880000000!5m2!1sen!2sus"
                   className="w-full h-full border-0"
                   loading="lazy"
                 />

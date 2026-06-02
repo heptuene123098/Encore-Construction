@@ -44,7 +44,7 @@ const Contact = () => {
             <div className="space-y-6">
               {[
                 { icon: Phone, label: "Phone", value: "+234 901 - 495 - 4263", href: "tel:+234 901 - 495 - 4263" },
-                { icon: Mail, label: "Email", value: "info@encore-construction.com", href: "mailto:info@encore-construction.com" },
+                { icon: Mail, label: "Email", value: "info@encore-construction.org", href: "mailto:info@encore-construction.org" },
                 { icon: MapPin, label: "Office", value: "24A Taiye Olowu, Lekki Phase 1, Lagos" },
                 { icon: Clock, label: "Hours", value: "Mon - Fri: 9:00 AM - 6:00 PM" },
               ].map(item => (
@@ -64,7 +64,7 @@ const Contact = () => {
               <div className="rounded-lg overflow-hidden h-64 border border-border">
                 <iframe
                   title="Office Location"
-                  src="https://www.google.com/maps?q=24+A+Taiye+Olowu+St,+Lekki+Phase+1,+Lagos&output=embed"
+                  src="https://www.google.org/maps?q=24+A+Taiye+Olowu+St,+Lekki+Phase+1,+Lagos&output=embed"
                   className="w-full h-full border-0"
                   loading="lazy"
                 />

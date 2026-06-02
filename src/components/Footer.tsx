@@ -35,8 +35,8 @@ const Footer = () => {
               <a href="tel:+23409014954263" className="flex items-center gap-3 text-sm text-primary-foreground/70 hover:text-gold transition-colors">
                 <Phone className="w-4 h-4 text-gold flex-shrink-0" /> +234 901 - 495 - 4263
               </a>
-              <a href="mailto:info@encoreconstruction.com" className="flex items-center gap-3 text-sm text-primary-foreground/70 hover:text-gold transition-colors">
-                <Mail className="w-4 h-4 text-gold flex-shrink-0" /> info@encoreconstruction.com
+              <a href="mailto:info@encoreconstruction.org" className="flex items-center gap-3 text-sm text-primary-foreground/70 hover:text-gold transition-colors">
+                <Mail className="w-4 h-4 text-gold flex-shrink-0" /> info@encoreconstruction.org
               </a>
               <div className="flex items-start gap-3 text-sm text-primary-foreground/70">
                 <MapPin className="w-4 h-4 text-gold flex-shrink-0 mt-0.5" /> 24A Taiye Olowu, Lekki Phase 1, Lagos
