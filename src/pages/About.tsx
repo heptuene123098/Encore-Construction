@@ -14,7 +14,6 @@ import hebz from "../assets/images/hebz.jpg";
 import dorcas from "../assets/images/dorcas.jpg";
 import pemu from "../assets/images/pemu.jpg";
 import pelu from "../assets/images/pelu.jpg";
-import floyd from "../assets/images/floyd.jpg";
 import akeem from "../assets/images/akeem.png";
 import gabriel from "../assets/images/gabriel.jpg";
 import korede from "../assets/images/korede.jpg";
@@ -43,8 +42,7 @@ const leadership = [
   { name: "Ifeoluwa Bolaji", role: "QA/QC Assistant", image: ife, bio: "Site inspection and quality documentation." },
   { name: "Ruth Odunayo", role: "QA/QC Assistant", image: ruth, bio: "Quality assurance testing and reporting." },
   { name: "Foyeke Oyedokun", role: "QA/QC Assistant", image: titi, bio: "Construction compliance and standards." },
-  { name: "Floyd Adada", role: "QA/QC Assistant", image: floyd, bio: "Field quality inspections and monitoring." },
-  { name: "Ridwan Atanda", role: "Construction Manager, GPI", image: floyd, bio: "Oversees The Good Place Ilasan construction." },
+  { name: "Ridwan Atanda", role: "Construction Manager, GPI", image: dummy, bio: "Oversees The Good Place Ilasan construction." },
   { name: "Afolakemi Talabi", role: "Construction Manager, GPL", image: dummy, bio: "Manages The Good Place Iyamu development." },
   { name: "Sodiq Adebanji", role: "Construction Manager, M6M", image: wale, bio: "Leads Maison 6 Mosely project delivery." },
   { name: "Mary Obafemi", role: "Construction Manager, MOM", image: mary, bio: "Oversees The Rock Apartment Victoria Island." },
