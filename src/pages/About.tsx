@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { Target, Eye, Award, Shield, Building2, ChevronRight, Linkedin } from "lucide-react";
+import { Target, Eye, Award, Shield, Building2, ChevronRight, Linkedin, ArrowUpRight } from "lucide-react";
+import { teamMembers } from "@/data/team";
 
 import teamImage from "@/assets/team.jpg";
 import teamImage1 from "@/assets/team1.jpg";
@@ -138,21 +139,42 @@ const About = () => {
           <h2 className="font-display text-3xl font-bold text-foreground mt-2">Meet Our <span className="text-gold-gradient">Team</span></h2>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {leadership.map((member) => (
-            <div key={member.name} className="bg-card rounded-lg border border-border shadow-sm overflow-hidden group hover:shadow-lg transition-shadow">
-              <div className="aspect-square overflow-hidden">
-                <img src={member.image} alt={member.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
-              </div>
-              <div className="p-4">
-                <h4 className="font-display text-base font-semibold text-foreground">{member.name}</h4>
-                <div className="text-gold text-sm font-medium mb-2">{member.role}</div>
-                <p className="text-xs text-muted-foreground mb-3">{member.bio}</p>
-                <a href="#" className="inline-flex items-center gap-1 text-xs text-muted-foreground hover:text-gold transition-colors">
-                  <Linkedin className="w-3.5 h-3.5" /> LinkedIn
-                </a>
-              </div>
-            </div>
-          ))}
+          {leadership.map((member) => {
+            const profile = teamMembers.find((t) => t.name === member.name);
+            const slug = profile?.slug;
+            const CardWrap: React.ElementType = slug ? Link : "div";
+            const wrapProps = slug ? { to: `/team/${slug}` } : {};
+            return (
+              <CardWrap
+                key={member.name}
+                {...wrapProps}
+                className="bg-card rounded-lg border border-border shadow-sm overflow-hidden group hover:shadow-lg hover:border-gold/40 transition-all block"
+              >
+                <div className="aspect-square overflow-hidden relative">
+                  <img src={member.image} alt={member.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+                  {slug && (
+                    <div className="absolute top-3 right-3 w-9 h-9 rounded-full bg-gold/95 text-primary flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity shadow-lg">
+                      <ArrowUpRight className="w-4 h-4" />
+                    </div>
+                  )}
+                </div>
+                <div className="p-4">
+                  <h4 className="font-display text-base font-semibold text-foreground group-hover:text-gold transition-colors">{member.name}</h4>
+                  <div className="text-gold text-sm font-medium mb-2">{member.role}</div>
+                  <p className="text-xs text-muted-foreground mb-3">{member.bio}</p>
+                  {slug ? (
+                    <span className="inline-flex items-center gap-1 text-xs font-medium text-foreground group-hover:text-gold transition-colors">
+                      View profile <ChevronRight className="w-3.5 h-3.5" />
+                    </span>
+                  ) : (
+                    <a href="#" className="inline-flex items-center gap-1 text-xs text-muted-foreground hover:text-gold transition-colors">
+                      <Linkedin className="w-3.5 h-3.5" /> LinkedIn
+                    </a>
+                  )}
+                </div>
+              </CardWrap>
+            );
+          })}
         </div>
       </div>
     </section>
