@@ -17,6 +17,7 @@ import Contact from "./pages/Contact";
 import Investors from "./pages/Investors";
 import ProjectMap from "./pages/ProjectMap";
 import ProjectDetail from "./pages/ProjectDetail";
+import TeamMember from "./pages/TeamMember";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -42,6 +43,7 @@ const App = () => (
             <Route path="/contact" element={<Contact />} />
             <Route path="/investors" element={<Investors />} />
             <Route path="/project-map" element={<ProjectMap />} />
+            <Route path="/team/:slug" element={<TeamMember />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
