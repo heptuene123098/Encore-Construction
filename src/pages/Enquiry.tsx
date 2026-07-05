@@ -29,11 +29,15 @@ const Enquiry = () => {
           message: formData.message,
         }),
       });
-      if (!res.ok) throw new Error("Failed");
+      if (!res.ok) {
+        const errorData = await res.json().catch(() => null);
+        throw new Error(errorData?.message || "Failed to send enquiry");
+      }
       toast.success("Thank you for your enquiry! Our team will contact you within 24 hours.");
       setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
-    } catch {
-      toast.error("Could not send your enquiry. Please try again or email us directly.");
+    } catch (error) {
+      const message = error instanceof Error ? error.message : "Could not send your enquiry. Please try again or email us directly.";
+      toast.error(message);
     } finally {
       setSubmitting(false);
     }
