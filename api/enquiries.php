@@ -15,15 +15,15 @@ if (!is_array($data)) {
     $data = $_POST;
 }
 
-$name = trim($data['name'] ?? '');
-$email = trim($data['email'] ?? '');
-$phone = trim($data['phone'] ?? '');
-$subject = trim($data['subject'] ?? 'General');
-$message = trim($data['message'] ?? '');
+$name = isset($data['name']) ? trim($data['name']) : '';
+$email = isset($data['email']) ? trim($data['email']) : '';
+$phone = isset($data['phone']) ? trim($data['phone']) : '';
+$subject = isset($data['subject']) ? trim($data['subject']) : 'General';
+$message = isset($data['message']) ? trim($data['message']) : '';
 
 if ($name === '' || $email === '' || $message === '') {
     http_response_code(400);
-    echo json_encode(['success' => false, 'message' => 'Missing required fields.']);
+    echo json_encode(array('success' => false, 'message' => 'Missing required fields.'));
     exit;
 }
 
@@ -69,7 +69,7 @@ $errstr = '';
 $socket = stream_socket_client('ssl://' . $host . ':' . $port, $errno, $errstr, 20);
 if (!$socket) {
     http_response_code(500);
-    echo json_encode(['success' => false, 'message' => 'Unable to connect to SMTP server.', 'error' => $errstr]);
+    echo json_encode(array('success' => false, 'message' => 'Unable to connect to SMTP server.', 'error' => $errstr));
     exit;
 }
 
@@ -93,7 +93,7 @@ $resp = readResponse($socket);
 if (strpos($resp, '250') !== 0) {
     fclose($socket);
     http_response_code(500);
-    echo json_encode(['success' => false, 'message' => 'SMTP EHLO failed.', 'error' => $resp]);
+    echo json_encode(array('success' => false, 'message' => 'SMTP EHLO failed.', 'error' => $resp));
     exit;
 }
 
@@ -102,7 +102,7 @@ $resp = readResponse($socket);
 if (strpos($resp, '334') !== 0) {
     fclose($socket);
     http_response_code(500);
-    echo json_encode(['success' => false, 'message' => 'SMTP AUTH LOGIN not accepted.', 'error' => $resp]);
+    echo json_encode(array('success' => false, 'message' => 'SMTP AUTH LOGIN not accepted.', 'error' => $resp));
     exit;
 }
 
@@ -111,7 +111,7 @@ $resp = readResponse($socket);
 if (strpos($resp, '334') !== 0) {
     fclose($socket);
     http_response_code(500);
-    echo json_encode(['success' => false, 'message' => 'SMTP username rejected.', 'error' => $resp]);
+    echo json_encode(array('success' => false, 'message' => 'SMTP username rejected.', 'error' => $resp));
     exit;
 }
 
@@ -120,7 +120,7 @@ $resp = readResponse($socket);
 if (strpos($resp, '235') !== 0) {
     fclose($socket);
     http_response_code(500);
-    echo json_encode(['success' => false, 'message' => 'SMTP password rejected.', 'error' => $resp]);
+    echo json_encode(array('success' => false, 'message' => 'SMTP password rejected.', 'error' => $resp));
     exit;
 }
 
@@ -129,7 +129,7 @@ $resp = readResponse($socket);
 if (strpos($resp, '250') !== 0) {
     fclose($socket);
     http_response_code(500);
-    echo json_encode(['success' => false, 'message' => 'SMTP MAIL FROM failed.', 'error' => $resp]);
+    echo json_encode(array('success' => false, 'message' => 'SMTP MAIL FROM failed.', 'error' => $resp));
     exit;
 }
 
@@ -138,7 +138,7 @@ $resp = readResponse($socket);
 if (strpos($resp, '250') !== 0 && strpos($resp, '251') !== 0) {
     fclose($socket);
     http_response_code(500);
-    echo json_encode(['success' => false, 'message' => 'SMTP RCPT TO failed.', 'error' => $resp]);
+    echo json_encode(array('success' => false, 'message' => 'SMTP RCPT TO failed.', 'error' => $resp));
     exit;
 }
 
@@ -147,7 +147,7 @@ $resp = readResponse($socket);
 if (strpos($resp, '354') !== 0) {
     fclose($socket);
     http_response_code(500);
-    echo json_encode(['success' => false, 'message' => 'SMTP DATA failed.', 'error' => $resp]);
+    echo json_encode(array('success' => false, 'message' => 'SMTP DATA failed.', 'error' => $resp));
     exit;
 }
 
@@ -156,7 +156,7 @@ $resp = readResponse($socket);
 if (strpos($resp, '250') !== 0) {
     fclose($socket);
     http_response_code(500);
-    echo json_encode(['success' => false, 'message' => 'SMTP message submission failed.', 'error' => $resp]);
+    echo json_encode(array('success' => false, 'message' => 'SMTP message submission failed.', 'error' => $resp));
     exit;
 }
 
@@ -164,4 +164,4 @@ writeCommand($socket, 'QUIT');
 readResponse($socket);
 fclose($socket);
 
-echo json_encode(['success' => true, 'message' => 'Enquiry sent successfully.']);
+echo json_encode(array('success' => true, 'message' => 'Enquiry sent successfully.'));
