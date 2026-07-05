@@ -23,12 +23,10 @@ const Contact = () => {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify({
-          _subject: `New contact message from ${form.name}`,
-          _template: "table",
-          _captcha: "false",
           name: form.name,
           email: form.email,
           phone: form.phone,
+          subject: "Contact form message",
           message: form.message,
         }),
       });
