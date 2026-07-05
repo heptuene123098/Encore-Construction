@@ -5,7 +5,7 @@ import { toast } from "sonner";
 import heroImage from "@/assets/hero-skyline.jpg";
 import OfficeMap from "@/components/OfficeMap";
 
-const FORM_ENDPOINT = "https://formsubmit.co/ajax/info@encoreconstruction.org";
+const FORM_ENDPOINT = import.meta.env.PROD ? "/api/enquiries.php" : "/api/enquiries";
 
 const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
@@ -23,12 +23,10 @@ const Contact = () => {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify({
-          _subject: `New contact message from ${form.name}`,
-          _template: "table",
-          _captcha: "false",
           name: form.name,
           email: form.email,
           phone: form.phone,
+          subject: "Contact form message",
           message: form.message,
         }),
       });
