@@ -18,30 +18,16 @@ const Enquiry = () => {
     }
     setSubmitting(true);
     try {
-      const isProduction = import.meta.env.PROD;
       const res = await fetch(FORM_ENDPOINT, {
         method: "POST",
-        headers: isProduction
-          ? { "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8", Accept: "application/json" }
-          : { "Content-Type": "application/json", Accept: "application/json" },
-        body: isProduction
-          ? new URLSearchParams({
-              _subject: `New enquiry: ${formData.subject || "General"} — ${formData.name}`,
-              _template: "table",
-              _captcha: "false",
-              name: formData.name,
-              email: formData.email,
-              phone: formData.phone,
-              subject: formData.subject,
-              message: formData.message,
-            }).toString()
-          : JSON.stringify({
-              name: formData.name,
-              email: formData.email,
-              phone: formData.phone,
-              subject: formData.subject,
-              message: formData.message,
-            }),
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          subject: formData.subject,
+          message: formData.message,
+        }),
       });
       if (!res.ok) {
         const errorData = await res.json().catch(() => null);
