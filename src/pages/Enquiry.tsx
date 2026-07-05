@@ -4,7 +4,7 @@ import { Phone, Mail, MapPin, Send, Loader2 } from "lucide-react";
 import { toast } from "sonner";
 import OfficeMap from "@/components/OfficeMap";
 
-const FORM_ENDPOINT = import.meta.env.PROD ? "/api/enquiries.php" : "/api/enquiries";
+const FORM_ENDPOINT = import.meta.env.VITE_API_URL;
 
 const Enquiry = () => {
   const [formData, setFormData] = useState({ name: "", email: "", phone: "", subject: "", message: "" });
