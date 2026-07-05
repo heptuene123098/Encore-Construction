@@ -121,7 +121,7 @@ const make = (
 };
 
 export const teamMembers: TeamMember[] = [
-  make(0, "Toba Ooye", "CEO & Founder", "Executive", toba,
+  make(0, "Ooye Toba", "CEO & Founder", "Executive", toba,
     "Visionary leader with 10+ years in construction and real estate development. Toba founded Encore to deliver world-class high-rise residences across Africa.",
     "2021",
     {

@@ -4,7 +4,7 @@ import { Phone, Mail, MapPin, Send, Loader2 } from "lucide-react";
 import { toast } from "sonner";
 import OfficeMap from "@/components/OfficeMap";
 
-const FORM_ENDPOINT = "https://formsubmit.co/ajax/info@encoreconstruction.org";
+const FORM_ENDPOINT = "/api/enquiries";
 
 const Enquiry = () => {
   const [formData, setFormData] = useState({ name: "", email: "", phone: "", subject: "", message: "" });
@@ -22,9 +22,6 @@ const Enquiry = () => {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify({
-          _subject: `New enquiry: ${formData.subject || "General"} — ${formData.name}`,
-          _template: "table",
-          _captcha: "false",
           name: formData.name,
           email: formData.email,
           phone: formData.phone,

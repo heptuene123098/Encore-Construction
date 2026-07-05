@@ -30,7 +30,7 @@ import dummy from "../assets/images/dummy.jpg";
 const teamImages = [teamImage, teamImage1, teamImage2];
 
 const leadership = [
-  { name: "Toba Ooye", role: "CEO & Founder", image: toba, bio: "Visionary leader with 10+ years in construction and real estate development." },
+  { name: "Ooye Toba", role: "CEO & Founder", image: toba, bio: "Visionary leader with 10+ years in construction and real estate development." },
   { name: "Oluwafunmbi Ajayi", role: "QA/QC Manager", image: funmbi, bio: "Ensures world-class quality standards across all projects." },
   { name: "Gabriel Oluwadurotimi", role: "MEP Manager", image: gabriel, bio: "Specialist in mechanical, electrical, and plumbing systems." },
   { name: "Akorede Akinpelu", role: "Survey Manager", image: korede, bio: "Precision surveying for all project developments." },
