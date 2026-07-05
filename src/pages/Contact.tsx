@@ -5,7 +5,7 @@ import { toast } from "sonner";
 import heroImage from "@/assets/hero-skyline.jpg";
 import OfficeMap from "@/components/OfficeMap";
 
-const FORM_ENDPOINT = "https://formsubmit.co/ajax/info@encoreconstruction.org";
+const FORM_ENDPOINT = import.meta.env.PROD ? "/api/enquiries.php" : "/api/enquiries";
 
 const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
