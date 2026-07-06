@@ -1,0 +1,21 @@
+{
+  "name": "encore-construction",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "cd Frontend && npm install && npm run build",
+    "start": "node server.js",
+    "dev": "cd Frontend && npm run dev",
+    "install-all": "npm install && cd Frontend && npm install"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.6",
+    "nodemailer": "^9.0.3",
+    "dotenv": "^17.4.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

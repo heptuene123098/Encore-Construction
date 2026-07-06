@@ -4,14 +4,15 @@
   "type": "module",
   "scripts": {
     "start": "node server.js",
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "dev": "node --watch server.js"
   },
   "dependencies": {
     "express": "^5.2.1",
     "cors": "^2.8.6",
     "nodemailer": "^9.0.3",
     "dotenv": "^17.4.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }
