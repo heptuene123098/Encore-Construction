@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "cd Frontend && npm install && npm run build && cd .. && xcopy /E /I Frontend\\dist dist",
+    "build": "cd Frontend && npm install && npm run build && cd .. && cp -r Frontend/dist/* dist/",
     "start": "node server.js",
     "dev": "cd Frontend && npm run dev",
     "install-all": "npm install && cd Frontend && npm install"
