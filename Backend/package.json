@@ -1,10 +1,12 @@
-// backend/package.json
 {
   "name": "encore-backend",
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
     "express": "^5.2.1",
